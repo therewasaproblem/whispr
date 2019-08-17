@@ -3,7 +3,7 @@
 # Whispr 
 [Link to the project at Heroku](http://whisprapp2019.herokuapp.com)
 
-Aplicativo criado com a intenção de ser um agregador de notícias de sites selecionados, em que o usuário escolhe quais as palavras-chaves que lhe interessam na manchete da notícia em questão.
+Aplicativo criado com a intenção de ser um agregador de notícias de sites selecionados, em que o usuário recebe as notícias de acordo com as palavras-chaves que configurou, exibindo apenas aquelas que contém a(s) palavra(s) em questão em sua manchete.
 
 ## Integrantes do projeto:
 
