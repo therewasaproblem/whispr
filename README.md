@@ -1,24 +1,18 @@
-# whispr [![Build Status](https://travis-ci.org/therewasaproblem/whispr.svg?branch=master)](https://travis-ci.org/therewasaproblem/whispr)
+# whispr [![Maintainability](https://api.codeclimate.com/v1/badges/3365bb60e779ac919f6c/maintainability)](https://codeclimate.com/github/therewasaproblem/whispr/maintainability) [![Build Status](https://travis-ci.org/therewasaproblem/whispr.svg?branch=master)](https://travis-ci.org/therewasaproblem/whispr)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Whispr 
+[Link to the project at Heroku](http://whisprapp2019.herokuapp.com)
 
-Things you may want to cover:
+## Integrantes do projeto:
 
-* Ruby version
+Guilherme Gonzalo Costa Cerda | 10284326 | @guigonzalo
 
-* System dependencies
+Joon Hyuk Kim | 10284243 | @FunnyProgrammer
 
-* Configuration
+Kelvin Kang | 10284271 | @kex1998
 
-* Database creation
+Lucas Pereira Castelo Branco | 10258772 | @LucasPCBranco
 
-* Database initialization
+Ramon Dantas De Jesus | 10258712 | @ekisu
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
