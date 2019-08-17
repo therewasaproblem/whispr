@@ -3,6 +3,8 @@
 # Whispr 
 [Link to the project at Heroku](http://whisprapp2019.herokuapp.com)
 
+Aplicativo criado com a intenção de ser um agregador de notícias de sites selecionados, em que o usuário escolhe quais as palavras-chaves que lhe interessam na manchete da notícia em questão.
+
 ## Integrantes do projeto:
 
 Guilherme Gonzalo Costa Cerda | 10284326 | @guigonzalo
