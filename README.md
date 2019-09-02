@@ -1,24 +1,21 @@
-# whispr [![Build Status](https://travis-ci.org/therewasaproblem/whispr.svg?branch=master)](https://travis-ci.org/therewasaproblem/whispr)
+# whispr [![Maintainability](https://api.codeclimate.com/v1/badges/3365bb60e779ac919f6c/maintainability)](https://codeclimate.com/github/therewasaproblem/whispr/maintainability) [![Build Status](https://travis-ci.org/therewasaproblem/whispr.svg?branch=master)](https://travis-ci.org/therewasaproblem/whispr)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Whispr 
+[Link to the project at Heroku](http://whisprapp2019.herokuapp.com)
 
-Things you may want to cover:
+Aplicativo criado com a intenção de ser um agregador de notícias de sites selecionados, em que o usuário recebe as notícias de acordo com as palavras-chaves que configurou, exibindo apenas aquelas que contém a(s) palavra(s) em questão em sua manchete.
 
-* Ruby version
+## Integrantes do projeto:
 
-* System dependencies
+Guilherme Gonzalo Costa Cerda | 10284326 | @guigonzalo
 
-* Configuration
+Joon Hyuk Kim | 10284243 | @FunnyProgrammer
 
-* Database creation
+Kelvin Kang | 10284271 | @kex1998
 
-* Database initialization
+Lucas Pereira Castelo Branco | 10258772 | @LucasPCBranco
 
-* How to run the test suite
+Ramon Dantas De Jesus | 10258712 | @ekisu
 
-* Services (job queues, cache servers, search engines, etc.)
+João Guilherme Da Costa Seike | 9784634 | @JgSeike
 
-* Deployment instructions
-
-* ...
