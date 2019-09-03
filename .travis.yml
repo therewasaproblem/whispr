@@ -2,7 +2,7 @@ language: ruby
 services:
   - postgresql
 before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
+  - psql -c 'create database whispr_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
 script:
   - bundle exec rake spec
