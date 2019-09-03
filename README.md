@@ -1,6 +1,6 @@
 # whispr [![Maintainability](https://api.codeclimate.com/v1/badges/3365bb60e779ac919f6c/maintainability)](https://codeclimate.com/github/therewasaproblem/whispr/maintainability) [![Build Status](https://travis-ci.org/therewasaproblem/whispr.svg?branch=master)](https://travis-ci.org/therewasaproblem/whispr)
 
-# Whispr 
+# Whispr
 [Link to the project at Heroku](http://whisprapp2019.herokuapp.com)
 
 Aplicativo criado com a intenção de ser um agregador de notícias de sites selecionados, em que o usuário recebe as notícias de acordo com as palavras-chaves que configurou, exibindo apenas aquelas que contém a(s) palavra(s) em questão em sua manchete.
@@ -17,10 +17,4 @@ Lucas Pereira Castelo Branco | 10258772 | @LucasPCBranco
 
 Ramon Dantas De Jesus | 10258712 | @ekisu
 
-<<<<<<< HEAD
-João Guilherme da Costa Seike | 9784634 | @JgSeike
-
-=======
 João Guilherme Da Costa Seike | 9784634 | @JgSeike
->>>>>>> 4e04d639cd8e8af0d02e9f66b6c42b8e82abcfe4
-
