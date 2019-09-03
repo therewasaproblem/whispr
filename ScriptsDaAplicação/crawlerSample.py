@@ -17,7 +17,7 @@ def returnHeadlines():
     for titulo in titles:
         print(titulo)
 
-# Return the headlines which have the given string parameter 
+# Return the headlines which have the given string parameter
 def returnParameterHeadlines(string):
     print("NOTICIAS COM A PALAVRA " + string + ":")
     for titulo2 in titles:
