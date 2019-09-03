@@ -17,6 +17,10 @@ Lucas Pereira Castelo Branco | 10258772 | @LucasPCBranco
 
 Ramon Dantas De Jesus | 10258712 | @ekisu
 
+<<<<<<< HEAD
 João Guilherme da Costa Seike | 9784634 | @JgSeike
 
+=======
+João Guilherme Da Costa Seike | 9784634 | @JgSeike
+>>>>>>> 4e04d639cd8e8af0d02e9f66b6c42b8e82abcfe4
 
