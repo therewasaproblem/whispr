@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 from re import search
+import sys
+print(sys.argv)
 
 url = "http://rss.uol.com.br/feed/noticias.xml"
 source_code = requests.get(url)
@@ -8,7 +10,6 @@ plain_text = source_code.text
 soup = BeautifulSoup(plain_text, 'xml')
 titles = soup.find_all('title')
 
-string = "Amazonia"
 
 # Return every headline available
 
@@ -27,3 +28,6 @@ def returnParameterHeadlines(string):
     for titulo2 in titles:
         if string in titulo2.text:
             print(titulo2)
+
+#returnHeadlines()
+#returnParameterHeadlines(string)

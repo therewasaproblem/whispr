@@ -17,8 +17,7 @@ string = sys.argv[1]
 
 
 def returnHeadlines():
-    print("TODAS AS NOTICIAS: \
-")
+    print("TODAS AS NOTICIAS:")
     for titulo in titles:
         print(titulo)
 
