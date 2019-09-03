@@ -10,13 +10,16 @@ titles = soup.find_all('title')
 
 string = "Bolsonaro"
 
-print("TODAS AS NOTICIAS: \
-")
-for titulo in titles:
-    print(titulo)
+# Return every headline available
+def returnHeadlines():
+    print("TODAS AS NOTICIAS: \
+    ")
+    for titulo in titles:
+        print(titulo)
 
-print("NOTICIAS COM A PALAVRA " + string + ":")
-for titulo2 in titles:
-    if string in titulo2.text:
-        print(titulo2)
-        
+# Return the headlines which have the given string parameter 
+def returnParameterHeadlines(string):
+    print("NOTICIAS COM A PALAVRA " + string + ":")
+    for titulo2 in titles:
+        if string in titulo2.text:
+            print(titulo2)
