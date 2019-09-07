@@ -6,7 +6,7 @@ Primeiro, instale o banco de dados com o comando:
 $ sudo apt-get install postgresql postgresql-contrib
 ```
 
-Em seguida, será necessário alterar o arquivo `/etc/postgresql/10/main/pg_hba.conf`. 
+Em seguida, será necessário alterar o arquivo `/etc/postgresql/(VERSAO)/main/pg_hba.conf`, onde versão é a versão major do seu Postgres (rode `psql --version` para descobrir, 10.x seria versão 10, por exemplo). 
 Altere o final deste arquivo para que _todas as ultimas colunas_ se tornem **md5**. 
 Como um exemplo:
 
