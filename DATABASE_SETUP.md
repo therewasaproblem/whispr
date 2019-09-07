@@ -7,7 +7,7 @@ $ sudo apt-get install postgresql postgresql-contrib
 ```
 
 Em seguida, será necessário alterar o arquivo `/etc/postgresql/(VERSAO)/main/pg_hba.conf`, onde versão é a versão major do seu Postgres (rode `psql --version` para descobrir, 10.x seria versão 10, por exemplo). 
-Altere o final deste arquivo para que _todas as ultimas colunas_ se tornem **md5**. 
+Altere o final deste arquivo para que _todas as ultimas colunas_ se tornem **md5**, _exceto a primeira_, que deve ser **trust**.
 Como um exemplo:
 
 ```
@@ -18,7 +18,7 @@ Como um exemplo:
 # maintenance (custom daily cronjobs, replication, and similar tasks).
 #
 # Database administrative login by Unix domain socket
-local   all             postgres                                md5
+local   all             postgres                                trust
 
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
 
@@ -28,6 +28,7 @@ local   all             all                                     md5
 host    all             all             127.0.0.1/32            md5
 # IPv6 local connections:
 host    all             all             ::1/128                 md5
+[...]
 ```
 
 Após alterar o arquivo, reinicie o servico, com:
@@ -43,6 +44,8 @@ postgres=# \password
 (Digite e confirme a senha aqui, por padrão é postgres, pode ser alterada no arquivo config/database.yml)
 postgres=# \q
 ```
+
+Após alterar a senha, mude novamente o arquivo `/etc/postgresql/(VERSAO)/main/pg_hba.conf`, e altere a ultima coluna da primeira linha, que era **trust**, para **md5**. Reinicie o servidor novamente, com `$ sudo service postgresql restart`.
 
 Crie os bancos de dados com: `$ rake db:create`, e, por fim, teste o servidor com `$ rails server`.
 
