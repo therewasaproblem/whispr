@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from re import search
 import sys
-print(sys.argv)
+print(sys.argv[1])
 
 url = "http://rss.uol.com.br/feed/noticias.xml"
 source_code = requests.get(url)
@@ -29,5 +29,5 @@ def returnParameterHeadlines(string):
         if string in titulo2.text:
             print(titulo2)
 
-#returnHeadlines()
-#returnParameterHeadlines(string)
+returnHeadlines()
+returnParameterHeadlines(string)
