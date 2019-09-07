@@ -17,6 +17,14 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  # The specified database role being used to connect to postgres.
+  # To create additional roles in postgres see `$ createuser --help`.
+  # When left blank, postgres will use the default role. This is
+  # the same name as the operating system user that initialized the database.
+  username: postgres
+
+  # The password associated with the postgres role (username).
+  password: postgres
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -24,15 +32,6 @@ default: &default
 development:
   <<: *default
   database: whispr_development
-
-  # The specified database role being used to connect to postgres.
-  # To create additional roles in postgres see `$ createuser --help`.
-  # When left blank, postgres will use the default role. This is
-  # the same name as the operating system user that initialized the database.
-  username: whispr
-
-  # The password associated with the postgres role (username).
-  #password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -81,5 +80,4 @@ test:
 production:
   <<: *default
   database: whispr_production
-  username: whispr
   password: <%= ENV['WHISPR_DATABASE_PASSWORD'] %>
