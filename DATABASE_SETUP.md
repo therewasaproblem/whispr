@@ -45,3 +45,11 @@ postgres=# \q
 ```
 
 Crie os bancos de dados com: `$ rake db:create`, e, por fim, teste o servidor com `$ rails server`.
+
+## Utilizando um usuário e senha não-padrão
+
+Além de alterar o arquivo `config/database.yml`, é possivel utilizar a variável de ambiente `DATABASE_URL` para definir uma configuração personalizada. Por exemplo:
+
+```sh
+$ export DATABASE_URL=postgres://usuario:senha@localhost
+```
