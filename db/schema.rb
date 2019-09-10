@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_10_010727) do
+ActiveRecord::Schema.define(version: 2019_09_10_013739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,9 +22,34 @@ ActiveRecord::Schema.define(version: 2019_09_10_010727) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "news", force: :cascade do |t|
+    t.string "title"
+    t.text "summary"
+    t.text "url"
+    t.integer "category_id"
+    t.integer "source_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sources", force: :cascade do |t|
+    t.string "name"
+    t.string "language"
+    t.text "homepage_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "user_preferences", force: :cascade do |t|
     t.integer "user_id"
     t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_sources", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "source_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,6 +62,10 @@ ActiveRecord::Schema.define(version: 2019_09_10_010727) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "news", "categories"
+  add_foreign_key "news", "sources"
   add_foreign_key "user_preferences", "categories"
   add_foreign_key "user_preferences", "users"
+  add_foreign_key "user_sources", "sources"
+  add_foreign_key "user_sources", "users"
 end
