@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
     def hello
-        result = `python3 PythonScripts/crawlerSample.py Bolsonaro`
-        render html: 'hello, world!' + result
+        render html: 'Hello! Welcome to WHISPR, a place where you will find recent AND trustful contents about your favourite and most searched news. Good News, everyone! Literally..'
     end
 end
