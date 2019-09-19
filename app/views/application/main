@@ -1,0 +1,87 @@
+<html>
+	<style>
+		.flex {
+			display: flex;
+		}
+
+		.flex-wrap {
+			flex-wrap: wrap;
+		}
+
+		.flex-item-1 {
+			flex: 2;
+		}
+
+
+		.item {
+			margin: 3px;
+			background: white;
+			text-align: center;
+			font-size: 1.3em;
+			align-self: center;
+		}
+		
+		.border {
+			margin: 5px;
+			border: 1px solid #ccc;
+			border-color: black;
+			border-radius: 8px;
+		}
+		
+		.left {
+			align-self: left;
+		}
+
+		}
+		
+		.right {
+			align-self: right;
+		}
+
+		.logo {
+			margin: 7px;
+			color: cyan;
+			font-size: 30px;
+			text-shadow: 200;
+			align-self: center;
+		}
+
+
+		.container {
+			max-width: 100%;
+			margin: 0 auto;
+			border: 2px solid #ccc;
+			border-color: violet;
+			background: white;
+		}
+
+		h1 {
+			text-align: center;
+			margin: 20px 0 0 0;
+			font-size: 1.25em;
+			font-weight: normal;
+		}
+
+		body {
+			
+			background-image: linear-gradient(to bottom, #051937, #173463, #2a5294, #3d72c7, #5194fd);
+			font-family: Oswald;
+			background-size: auto;
+			height: 100%;
+		}
+
+	</style>
+	
+	<body>
+		<section class="container flex">
+			<div class="logo left">Whispr</div>
+			<div class="item left border">Notícias Recentes</div>
+			<div class="item flex-item-1"></div>
+			<div class="item right">
+				<input class="item2" type="text" name="search">
+				<input class="item3" target="_blank"  type="submit" value="Pesquisar">
+			</div>
+			<div class="item">Bem vindo UsuárioX</div>
+		</section>
+	</body>
+</html>
