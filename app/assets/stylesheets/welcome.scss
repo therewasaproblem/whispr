@@ -1,63 +1,115 @@
-$c-border: #9F2042;
-$c-background: #E3E4DB;
-$c-text: #441151;
-
-body {
-  font-family: 'Alice', Helvetica, sans-serif;
-}
-
-divW {
-  margin: 4em auto;
-  padding: 4em;
-  box-sizing: border-box;
-  width: 30em;
-  height: 15em;
-  text-align: center;
-  background-color: $c-background;
- 
-}
-
-.sparkle {
-  max-width: 10em;
-  color: $c-text;
-  margin: auto auto;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.u-hover--sparkle {
- 
-  box-sizing: border-box;
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  padding: 0.75em;
-  &::before,
-  &::after {
-    content: '';
-    box-sizing: border-box;
-    position: absolute;
-    top: 0;
+  margin: 20px auto;
+  width: 250px;
+  height: 250px;
+  background: white;
+  border-radius: 75px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+}
+
+div:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+div:hover:before, div:hover:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #FDA8CF;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+div:hover:after {
+  background: #F3CE5E;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
     left: 0;
-    height: 100%;
-    width: 100%;
-    transform-origin: center;
   }
-
-  &::before {
-    border-top: 0.2em solid $c-border;
-    border-bottom: 0.2em solid $c-border;
-    transform: scale3d(0,1,1);
+  12% {
+    top: -2px;
+    left: 2px;
   }
-
-  &::after {
-    border-left: 0.2em solid $c-border;
-    border-right: 0.2em solid $c-border;
-    transform: scale3d(1,0,1);
+  25% {
+    top: 0;
+    left: 5px;    
   }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;    
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;    
+  }
+}
 
-  &:hover::before,
-  &:hover::after {
-    transform: scale3d(1,1,1);
-    transition: transform 900ms;
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;    
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;    
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;    
   }
 }
