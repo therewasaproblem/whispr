@@ -1,5 +1,5 @@
 <h1>Notícias à respeito de <%= @keyword %> </h1>
 
 <% @items.each do |item| %>
-    <p><%= item.title %></p>
+    <%= render partial: "news_card", locals: { item: item } %>
 <% end %>
