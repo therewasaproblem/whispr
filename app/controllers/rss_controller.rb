@@ -12,13 +12,13 @@ class RssController < ActionController::Base
 
     def index
         @items = buscarNoticias("http://rss.uol.com.br/feed/noticias.xml")
-        render "index"
+        render "index", layout: "application"
     end
 
     def search
 	@keyword = params[:q]
         @items = buscarNoticias("http://rss.uol.com.br/feed/noticias.xml")        
 	@items = @items.select { |item| item.title.downcase.include? params[:q].downcase }
-        render "search"
+        render "search", layout: "application"
     end
 end
