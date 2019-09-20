@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
     def hello
-        render html: 'teste aqui'
+        render "index", layout: "application"
     end
 end
