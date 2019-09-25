@@ -2,6 +2,15 @@
 body {
     width: 100%;
     height: 100vh;
+    background-image: linear-gradient(to right top, #533fde, #273cb9, #003593, #002b6c, #001f45, #042a4a, #11344d, #213e50, #2a697f, #3097ab, #3ec8d2, #5ffbf1);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Oswald;
+}
+
+title {
+    width: 100%;
+    height: 100vh;
     color: #fff;
     background-image: linear-gradient(to right top, #533fde, #273cb9, #003593, #002b6c, #001f45, #042a4a, #11344d, #213e50, #2a697f, #3097ab, #3ec8d2, #5ffbf1);
     background-repeat: no-repeat;
@@ -21,13 +30,13 @@ h1 {
 }
 
 .center {
-    padding: 20% 0;
+    padding: 5% 0;
     text-align: center;
 }
 
 .button {
 	display: block;
-  width: 320px;
+  width: 25%;
   max-width: 100%;
   margin: 0 auto;
   margin-bottom: 0;
