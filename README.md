@@ -1,4 +1,4 @@
-# whispr [![Maintainability](https://api.codeclimate.com/v1/badges/3365bb60e779ac919f6c/maintainability)](https://codeclimate.com/github/therewasaproblem/whispr/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/therewasaproblem/whispr/test_coverage) [![Build Status](https://travis-ci.org/therewasaproblem/whispr.svg?branch=master)](https://travis-ci.org/therewasaproblem/whispr)
+# whispr [![Maintainability](https://api.codeclimate.com/v1/badges/3365bb60e779ac919f6c/maintainability)](https://codeclimate.com/github/therewasaproblem/whispr/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/3365bb60e779ac919f6c/test_coverage)](https://codeclimate.com/github/therewasaproblem/whispr/test_coverage) [![Build Status](https://travis-ci.org/therewasaproblem/whispr.svg?branch=master)](https://travis-ci.org/therewasaproblem/whispr)
 
 # Whispr
 [Link to the project at Heroku](http://whisprapp2019.herokuapp.com)
