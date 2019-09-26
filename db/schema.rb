@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2019_09_26_201628) do
     t.integer "source_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["url", "title", "summary"], name: "index_news_on_url_and_title_and_summary", unique: true
+    t.index "url, md5((title)::text), md5(summary)", name: "index_news_on_url_and_title_and_summary", unique: true
   end
 
   create_table "sources", force: :cascade do |t|
