@@ -21,6 +21,10 @@ gem 'devise'
 # Bootstrap
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+
+# Sidekiq para buscar os RSS no background.
+gem 'sidekiq'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.1'
 end
