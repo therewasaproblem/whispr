@@ -2,7 +2,10 @@
 class RSSFeed
     def initialize(feed_url, options = {})
         @feed_url = feed_url
-        @options = options
+        # As options podem ter chaves como symbols (options[:key])
+        # ou como strings (options["key"]), então é necessário chamar o
+        # método abaixo.
+        @options = options.with_indifferent_access
     end
 
     def items
