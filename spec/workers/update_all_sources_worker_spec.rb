@@ -1,0 +1,27 @@
+require 'rails_helper' 
+require 'sidekiq/testing'
+Sidekiq::Testing.fake!
+
+RSpec.describe UpdateAllSourcesWorker, type: :worker do
+    before(:each) {
+        # Criar as sources de teste.
+        @sources = [
+            Source.create(name: "Ruby", language: "en",
+                      homepage_url: "https://www.ruby-lang.org/",
+                      feed_url: "https://www.ruby-lang.org/en/feeds/news.rss"),
+            Source.create(name: "UOL", language: "pt-br",
+                      homepage_url: "https://www.uol.com.br/",
+                      feed_url: "http://rss.uol.com.br/feed/noticias.xml",
+                      feed_options: { encoding: "Windows-1252" })
+        ]
+    }
+
+    it "should add news to the database" do
+        expect(News.count).to eq(0)
+        
+        UpdateAllSourcesWorker.perform_async
+        Sidekiq::Worker.drain_all # Isso força todos os workers a terminarem.
+
+        expect(News.count).to be > 0
+    end
+end
