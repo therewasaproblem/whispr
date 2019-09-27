@@ -24,6 +24,8 @@ gem 'jquery-rails'
 
 # Sidekiq para buscar os RSS no background.
 gem 'sidekiq'
+# Gem para rodar as atualizações de notícias periodicamente.
+gem 'sidekiq-scheduler'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.1'

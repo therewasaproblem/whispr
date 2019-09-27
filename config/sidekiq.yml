@@ -1,0 +1,4 @@
+:schedule:
+  UpdateAllSourcesWorker:
+    # A cada 5 minutos, mas também rodar na inicialização
+    every: ["5m", first_in: "0s"]
