@@ -17,6 +17,8 @@ class NewsFeedUpdateWorker
 
             begin
                 news.save
+            rescue ActiveRecord::RecordNotUnique
+                # Ignorar
             rescue ActiveRecord::StatementInvalid => e
                 # Permitir apenas este tipo de exceção, que é um registro
                 # duplicado que "passou" pelo Rails, mas foi detectado no DB.

@@ -31,4 +31,20 @@ RSpec.describe NewsFeedUpdateWorker, type: :worker do
             source_with_feed_options.feed_options
         expect(News.count).to be > 0
     end
+
+    it "should not add duplicate news" do
+        expect(News.count).to eq(0)
+        NewsFeedUpdateWorker.new.perform source_with_feed_options.id, category.id,
+            source_with_feed_options.feed_url,
+            source_with_feed_options.feed_options
+        expect(News.count).to be > 0
+
+        old_news_count = News.count
+
+        NewsFeedUpdateWorker.new.perform source_with_feed_options.id, category.id,
+            source_with_feed_options.feed_url,
+            source_with_feed_options.feed_options
+        
+        expect(News.count).to eq(old_news_count)
+    end
 end
