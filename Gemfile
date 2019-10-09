@@ -21,6 +21,12 @@ gem 'devise'
 # Bootstrap
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+
+# Sidekiq para buscar os RSS no background.
+gem 'sidekiq'
+# Gem para rodar as atualizações de notícias periodicamente.
+gem 'sidekiq-scheduler'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.1'
 end
@@ -65,6 +71,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  # Add Sidekiq testing support to RSpec
+  gem 'rspec-sidekiq'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

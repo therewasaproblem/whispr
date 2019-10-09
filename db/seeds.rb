@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Source.create name: "UOL", language: "pt-br",
+              homepage_url: "https://www.uol.com.br/",
+              feed_url: "http://rss.uol.com.br/feed/noticias.xml",
+              feed_options: { encoding: "Windows-1252" }

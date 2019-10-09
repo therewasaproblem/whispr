@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Ruby News</title>
+    <link>https://www.ruby-lang.org/en/feeds/news.rss</link>
+    <language>en-US</language>
+    <ttl>40</ttl>
+    <description>The latest news from ruby-lang.org.</description>
+    
+    <item>
+      <title>Ruby 2.4.9 Released</title>
+      <description>&lt;p&gt;Ruby 2.4.9 has been released.&lt;/p&gt;
+
+&lt;p&gt;This release is a re-package of 2.4.8 because the previous Ruby 2.4.8
+release tarball does not install.
+(See &lt;a href=&quot;https://bugs.ruby-lang.org/issues/16197&quot;&gt;[Bug #16197]&lt;/a&gt; in detail.)
+There are no essential change except their version numbers between 2.4.8 and 2.4.9.&lt;/p&gt;
+
+&lt;p&gt;Ruby 2.4 is now under the state of the security maintenance phase, until
+the end of March of 2020.  After that date, maintenance of Ruby 2.4
+will be ended. We recommend you start planning the migration to newer
+versions of Ruby, such as 2.6 or 2.5.&lt;/p&gt;
+
+&lt;h2&gt;Download&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.9.tar.bz2&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.9.tar.bz2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 12509600
+SHA1: e47fcae4862b3fa441df2ca7f2f64ad7b37db489
+SHA256: f72bdef50246ef047ba3ce9c59d2081b949feb16f9a04e008108e98f1a995e99
+SHA512: d485444dcd025a261a16bd740dae63c0aa23e4138a095584e7a83aec47af34415c7d9cbc1313e92da2ec416b11bfddf20bb1a7b60c80f12906d11ef27409b3e8
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.9.tar.gz&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.9.tar.gz&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 14133507
+SHA1: da07b802cf7598547f98b7b2d8fc8ff5f03dbef4
+SHA256: f99b6b5e3aa53d579a49eb719dd0d3834d59124159a6d4351d1e039156b1c6ae
+SHA512: 94aba73f48870b5fdb34f7c9eb0419c0a3b962884df6462ef27e69db306829cad0cfc0ac6b9ba445bcb4282b070b75fcbdb3142af2a744252f25ef0052edf04d
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.9.tar.xz&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.9.tar.xz&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 10078316
+SHA1: ae41ac14f98073ba9e6e8ba732580a846286261c
+SHA256: 0c4e000253ef7187feeb940a01a1c7594f28d63aa16f978e892a0e2864f58614
+SHA512: 9046575315c29c789427c2d00c832f0c0970e47fd158bbe8e4f2df5cff2ea9c06c65c3493adb4656e5b32ebfdc546092911f98a8ad7f698bc001c290db5888c7
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.9.zip&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.9.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 15765536
+SHA1: 5fa8a25fda7fb938bbbd45cf2c585a35875118ff
+SHA256: 4ad1c32554319661f2872bb978ff2cd520bc4593681a6476b4c5e7f330172d8b
+SHA512: e87aa613738563572a69ba179f3028994d86bcdc2e990b538aadde87d07aab67ebb7e35a019028cd51187a171368b277b7c79b6cb2e6b3497f0bb9abbe25cfdc
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Comment&lt;/h2&gt;
+
+&lt;p&gt;Thanks to everyone who helped with this release.&lt;/p&gt;
+
+&lt;p&gt;Posted by usa on 2 Oct 2019&lt;/p&gt;</description>
+      <pubDate>Wed, 02 Oct 2019 09:00:00 +0000</pubDate>
+      <guid>https://www.ruby-lang.org/en/news/2019/10/02/ruby-2-4-9-released/</guid>
+      <link>https://www.ruby-lang.org/en/news/2019/10/02/ruby-2-4-9-released/</link>
+    </item>
+    
+    <item>
+      <title>CVE-2019-16201: Regular Expression Denial of Service vulnerability of WEBrick's Digest access authentication</title>
+      <description>&lt;p&gt;Regular expression denial of service vulnerability of WEBrick’s Digest authentication module was found.  An attacker can exploit this vulnerability to cause an effective denial of service against a WEBrick service.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16201&quot;&gt;CVE-2019-16201&lt;/a&gt; has been assigned to this vulnerability.&lt;/p&gt;
+
+&lt;p&gt;All users running any affected releases should upgrade as soon as possible.&lt;/p&gt;
+
+&lt;h2&gt;Affected Versions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All releases that are Ruby 2.3 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.4 series: Ruby 2.4.7 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.5 series: Ruby 2.5.6 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.6 series: Ruby 2.6.4 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.7.0-preview1&lt;/li&gt;
+  &lt;li&gt;prior to master commit 36e057e26ef2104bc2349799d6c52d22bb1c7d03&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Acknowledgement&lt;/h2&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://hackerone.com/358&quot;&gt;358&lt;/a&gt; for discovering this issue.&lt;/p&gt;
+
+&lt;h2&gt;History&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Originally published at 2019-10-01 11:00:00 (UTC)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Posted by mame on 1 Oct 2019&lt;/p&gt;</description>
+      <pubDate>Tue, 01 Oct 2019 11:00:00 +0000</pubDate>
+      <guid>https://www.ruby-lang.org/en/news/2019/10/01/webrick-regexp-digestauth-dos-cve-2019-16201/</guid>
+      <link>https://www.ruby-lang.org/en/news/2019/10/01/webrick-regexp-digestauth-dos-cve-2019-16201/</link>
+    </item>
+    
+    <item>
+      <title>Ruby 2.6.5 Released</title>
+      <description>&lt;p&gt;Ruby 2.6.5 has been released.&lt;/p&gt;
+
+&lt;p&gt;This release includes security fixes.
+Please check the topics below for details.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/10/01/code-injection-shell-test-cve-2019-16255/&quot;&gt;CVE-2019-16255: A code injection vulnerability of Shell#[] and Shell#test&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/10/01/http-response-splitting-in-webrick-cve-2019-16254/&quot;&gt;CVE-2019-16254: HTTP response splitting in WEBrick (Additional fix)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/10/01/nul-injection-file-fnmatch-cve-2019-15845/&quot;&gt;CVE-2019-15845: A NUL injection vulnerability of File.fnmatch and File.fnmatch?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/10/01/webrick-regexp-digestauth-dos-cve-2019-16201/&quot;&gt;CVE-2019-16201: Regular Expression Denial of Service vulnerability of WEBrick’s Digest access authentication&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See the &lt;a href=&quot;https://github.com/ruby/ruby/compare/v2_6_4...v2_6_5&quot;&gt;commit logs&lt;/a&gt; for changes in detail.&lt;/p&gt;
+
+&lt;h2&gt;Download&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.bz2&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.bz2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 14134619
+SHA1: d959802f994594f3296362883b5ce7edf5e6e465
+SHA256: 97ddf1b922f83c1f5c50e75bf54e27bba768d75fea7cda903b886c6745e60f0a
+SHA512: 28e0b04ac8ca85203eb8939137b5e5de4850c933faf7f62fc69648fe1886faaabf6cdf48382f9d9585c1720876d10b41dafd33efaeb23341c309917fbd8a6e21
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.gz&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.gz&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 16172159
+SHA1: 1416ce288fb8bfeae07a12b608540318c9cace71
+SHA256: 66976b716ecc1fd34f9b7c3c2b07bbd37631815377a2e3e85a5b194cfdcbed7d
+SHA512: 7ab7a0cdaf4863152efc86dbcfada7f10ab3fe33590eee3b6ab7b26fc27835a8a0ded4ec02b58e9969175582a2be5410da3dc9f8694a3cd2db97708bd72773e1
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.xz&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.xz&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 11553580
+SHA1: 575d3f68cbfa753fb07b538824711214f859b9c0
+SHA256: d5d6da717fd48524596f9b78ac5a2eeb9691753da5c06923a6c31190abe01a62
+SHA512: e8ae3b5d4d23a93d0ef6057235ad0e573665a8b4b6544e1c70b4cce9c4d2fb9094e5c8fe8a9ab7b9996efe3ada603f9b4ef1fd08fb5a83253c1ae2b5e3f202db
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.zip&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 19839803
+SHA1: 66d850ea8275615b1282ef832c34645bbf9ebb16
+SHA256: 9455170dd264f69bd92ab0f4f30e5bdfc1ecafe32568114f1588a3850ca6e5fd
+SHA512: b9f54090f982695d92fc555cd1090db34496284edc69e335a16dea0d3189a33847464d1d1b701599bdabad0688efdf43cbbea41426f816a666d8ba7ccae6b5cf
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Comment&lt;/h2&gt;
+
+&lt;p&gt;Many committers, developers, and users who provided bug reports helped us make this release.
+Thanks for their contributions.&lt;/p&gt;
+
+&lt;p&gt;Posted by nagachika on 1 Oct 2019&lt;/p&gt;</description>
+      <pubDate>Tue, 01 Oct 2019 11:00:00 +0000</pubDate>
+      <guid>https://www.ruby-lang.org/en/news/2019/10/01/ruby-2-6-5-released/</guid>
+      <link>https://www.ruby-lang.org/en/news/2019/10/01/ruby-2-6-5-released/</link>
+    </item>
+    
+    <item>
+      <title>Ruby 2.5.7 Released</title>
+      <description>&lt;p&gt;Ruby 2.5.7 has been released.&lt;/p&gt;
+
+&lt;p&gt;This release includes security fixes as listed below.
+Please check the topics below for details.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/10/01/code-injection-shell-test-cve-2019-16255/&quot;&gt;CVE-2019-16255: A code injection vulnerability of Shell#[] and Shell#test&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/10/01/http-response-splitting-in-webrick-cve-2019-16254/&quot;&gt;CVE-2019-16254: HTTP response splitting in WEBrick (Additional fix)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/10/01/nul-injection-file-fnmatch-cve-2019-15845/&quot;&gt;CVE-2019-15845: A NUL injection vulnerability of File.fnmatch and File.fnmatch?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/10/01/webrick-regexp-digestauth-dos-cve-2019-16201/&quot;&gt;CVE-2019-16201: Regular Expression Denial of Service vulnerability of WEBrick’s Digest access authentication&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See the &lt;a href=&quot;https://github.com/ruby/ruby/compare/v2_5_6...v2_5_7&quot;&gt;commit log&lt;/a&gt; for details.&lt;/p&gt;
+
+&lt;h2&gt;Download&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.7.tar.bz2&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.7.tar.bz2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 13794351
+SHA1: 51154b6bfed967b5acd7903790402172ced2563b
+SHA256: e67c69b141ed27158e47d9a4fe7e59749135b0f138dce06c8c15c3214543f56f
+SHA512: 7d6a7d41b4f3789f46be5f996099f3eb8321aa4778b2a8ff44142654e769ba4ba2df127dd0f267547e4c8cd6ff46364f18e79838df54fcd7e3fb714294ee0099
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.7.tar.gz&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.7.tar.gz&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 15669771
+SHA1: 541039290d188fff683a1d2f2892bd74854dd022
+SHA256: 0b2d0d5e3451b6ab454f81b1bfca007407c0548dea403f1eba2e429da4add6d4
+SHA512: 6c4219e1ac316fb00cdd5ff2ac6292448e6ddf49f25eda91426f8e0072288e8849d5c623bf9d532b8e93997b23dddc24718921d92b74983aac8fdb50db4ee809
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.7.tar.xz&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.7.tar.xz&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 11296440
+SHA1: dd6b2841334ee99250fdf6a29c4eda501df6be97
+SHA256: 201870e8f58957d542233fef588b1d76f7bf962fea44dcbd2237f4a5899a3f95
+SHA512: 63b7c75fab44cd1bd22f22ddec00c740cf379ac7240da0dfafcec54347766695faef47428ce1c433fd77fa96992e976c984697067fa526236d383b12adc9ce75
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.7.zip&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.7.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 19051936
+SHA1: 2b761378ec667ca5980d37cb3c591bdf88c51e45
+SHA256: c56821bea150166c599195679c0629f8dfc16984aae0ed744bf306ef45abbd68
+SHA512: a5543a5b7dcee1d92c4edd874b1be92d5451402ce1320cc5c8f49188fa2243d70413f31b9e5cce7f434f1f37e6f8c3aef1be5407e5075eacbd7ca6836c67e6e3
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Comment&lt;/h2&gt;
+
+&lt;p&gt;Thanks to everyone who helped with this release.&lt;/p&gt;
+
+&lt;p&gt;The maintenance of Ruby 2.5, including this release, is based on the “Agreement for the Ruby stable version” of the Ruby Association.&lt;/p&gt;
+
+&lt;p&gt;Posted by usa on 1 Oct 2019&lt;/p&gt;</description>
+      <pubDate>Tue, 01 Oct 2019 11:00:00 +0000</pubDate>
+      <guid>https://www.ruby-lang.org/en/news/2019/10/01/ruby-2-5-7-released/</guid>
+      <link>https://www.ruby-lang.org/en/news/2019/10/01/ruby-2-5-7-released/</link>
+    </item>
+    
+    <item>
+      <title>Ruby 2.4.8 Released</title>
+      <description>&lt;p&gt;Ruby 2.4.8 has been released.&lt;/p&gt;
+
+&lt;p&gt;This release includes security fixes.
+Please check the topics below for details.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/10/01/code-injection-shell-test-cve-2019-16255/&quot;&gt;CVE-2019-16255: A code injection vulnerability of Shell#[] and Shell#test&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/10/01/http-response-splitting-in-webrick-cve-2019-16254/&quot;&gt;CVE-2019-16254: HTTP response splitting in WEBrick (Additional fix)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/10/01/nul-injection-file-fnmatch-cve-2019-15845/&quot;&gt;CVE-2019-15845: A NUL injection vulnerability of File.fnmatch and File.fnmatch?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/10/01/webrick-regexp-digestauth-dos-cve-2019-16201/&quot;&gt;CVE-2019-16201: Regular Expression Denial of Service vulnerability of WEBrick’s Digest access authentication&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ruby 2.4 is now under the state of the security maintenance phase, until
+the end of March of 2020.  After that date, maintenance of Ruby 2.4
+will be ended. We recommend you start planning the migration to newer
+versions of Ruby, such as 2.6 or 2.5.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update (Oct 2nd 4:00 UTC):&lt;/strong&gt; We’re working on the issue that the Ruby 2.4.8 release tarball doesn’t install under &lt;em&gt;non-root&lt;/em&gt; user. Follow &lt;a href=&quot;https://bugs.ruby-lang.org/issues/16197&quot;&gt;[Bug #16197]&lt;/a&gt; for detailed updates.&lt;/p&gt;
+
+&lt;h2&gt;Download&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.8.tar.bz2&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.8.tar.bz2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 12204030
+SHA1: 5f742a8df243fa4e216ff6f0c26cc8222a182459
+SHA256: e30eedd91386bec81489d2637522c9017aebba46f98e8b502f679df6b2f6a469
+SHA512: 2d7e0f5ad766e2a12a1b53ff838e6bfe86244ffb7202196769c25e9df6f71f3ccdd8605e7ef35c53e54310bc82caf6b368ad5111dd0a3ad70a3aae1a7be93f08
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.8.tar.gz&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.8.tar.gz&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 13800260
+SHA1: a13b0915b7fb3dd0fe1ed6a4e3640034038ba6c9
+SHA256: 37f0d180afa56ec3e7a3669c6f1b6ee8a47a811261f0e1afa8f817c8b577bd68
+SHA512: 4e5068b73356a9fa0bd2c8aaa261909039653c62dc363dd8b36c9c73b11b9c4e6ade752d7c67f1b38c00e27a4861f94ce696158bd210035ea0b417d0887a329b
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.8.tar.xz&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.8.tar.xz&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 9813812
+SHA1: adf24e0b0ad1755067435f21baa8d142bcaff5a9
+SHA256: a2a8f53ef14b891821dbbf67b081d7b9e223007a347000ff4a86a226a4708272
+SHA512: 5f51a8312c23c1c2bfbb9c59efbd789492a4a7e4b1d4e7764db6eaaa542008e814b40817f10825e22c7fa8715fb9187be5d09b06128da211559b3601785937ea
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.8.zip&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.8.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE: 15322048
+SHA1: 756a206a5f91c1237432f693b157a6842039d760
+SHA256: a84e1c946761b1ed947194b6248a50f9aee21ca412dcd6021973951fd846a035
+SHA512: dcf7dead5baed4ffbd68016581ef1162f78729db9b5a49501a04d68d768e9138faa6e293c91dd9203a9a28d406bb236dd633688f1e96a07906e37db273ac8846
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Comment&lt;/h2&gt;
+
+&lt;p&gt;Thanks to everyone who helped with this release, especially, to reporters of the vulnerability.&lt;/p&gt;
+
+&lt;p&gt;Posted by usa on 1 Oct 2019&lt;/p&gt;</description>
+      <pubDate>Tue, 01 Oct 2019 11:00:00 +0000</pubDate>
+      <guid>https://www.ruby-lang.org/en/news/2019/10/01/ruby-2-4-8-released/</guid>
+      <link>https://www.ruby-lang.org/en/news/2019/10/01/ruby-2-4-8-released/</link>
+    </item>
+    
+    <item>
+      <title>CVE-2019-15845: A NUL injection vulnerability of File.fnmatch and File.fnmatch?</title>
+      <description>&lt;p&gt;A NUL injection vulnerability of Ruby built-in methods (&lt;code&gt;File.fnmatch&lt;/code&gt; and &lt;code&gt;File.fnmatch?&lt;/code&gt;) was found.  An attacker who has the control of the path pattern parameter could exploit this vulnerability to make path matching pass despite the intention of the program author.
+&lt;a href=&quot;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-15845&quot;&gt;CVE-2019-15845&lt;/a&gt; has been assigned to this vulnerability.&lt;/p&gt;
+
+&lt;h2&gt;Details&lt;/h2&gt;
+
+&lt;p&gt;Built-in methods &lt;code&gt;File.fnmatch&lt;/code&gt; and its alias &lt;code&gt;File.fnmatch?&lt;/code&gt; accept the path pattern as their first parameter.  When the pattern contains NUL character (&lt;code&gt;\0&lt;/code&gt;), the methods recognize that the path pattern ends immediately before the NUL byte.  Therefore, a script that uses an external input as the pattern argument, an attacker can make it wrongly match a pathname that is the second parameter.&lt;/p&gt;
+
+&lt;p&gt;All users running any affected releases should upgrade as soon as possible.&lt;/p&gt;
+
+&lt;h2&gt;Affected Versions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All releases that are Ruby 2.3 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.4 series: Ruby 2.4.7 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.5 series: Ruby 2.5.6 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.6 series: Ruby 2.6.4 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.7.0-preview1&lt;/li&gt;
+  &lt;li&gt;prior to master commit a0a2640b398cffd351f87d3f6243103add66575b&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Acknowledgement&lt;/h2&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://hackerone.com/ooooooo_q&quot;&gt;ooooooo_q&lt;/a&gt; for discovering this issue.&lt;/p&gt;
+
+&lt;h2&gt;History&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Originally published at 2019-10-01 11:00:00 (UTC)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Posted by mame on 1 Oct 2019&lt;/p&gt;</description>
+      <pubDate>Tue, 01 Oct 2019 11:00:00 +0000</pubDate>
+      <guid>https://www.ruby-lang.org/en/news/2019/10/01/nul-injection-file-fnmatch-cve-2019-15845/</guid>
+      <link>https://www.ruby-lang.org/en/news/2019/10/01/nul-injection-file-fnmatch-cve-2019-15845/</link>
+    </item>
+    
+    <item>
+      <title>CVE-2019-16254: HTTP response splitting in WEBrick (Additional fix)</title>
+      <description>&lt;p&gt;There is an HTTP response splitting vulnerability in WEBrick bundled with Ruby. This vulnerability has been assigned the CVE identifier &lt;a href=&quot;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16254&quot;&gt;CVE-2019-16254&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Details&lt;/h2&gt;
+
+&lt;p&gt;If a program using WEBrick inserts untrusted input into the response header, an attacker can exploit it to insert a newline character to split a header, and inject malicious content to deceive clients.&lt;/p&gt;
+
+&lt;p&gt;This is the same issue as &lt;a href=&quot;https://www.ruby-lang.org/en/news/2018/03/28/http-response-splitting-in-webrick-cve-2017-17742/&quot;&gt;CVE-2017-17742&lt;/a&gt;.  The previous fix was incomplete, which addressed the CRLF vector, but did not address an isolated CR or an isolated LF.&lt;/p&gt;
+
+&lt;p&gt;All users running an affected release should upgrade immediately.&lt;/p&gt;
+
+&lt;h2&gt;Affected Versions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All releases that are Ruby 2.3 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.4 series: Ruby 2.4.7 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.5 series: Ruby 2.5.6 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.6 series: Ruby 2.6.4 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.7.0-preview1&lt;/li&gt;
+  &lt;li&gt;prior to master commit 3ce238b5f9795581eb84114dcfbdf4aa086bfecc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Acknowledgement&lt;/h2&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://hackerone.com/znz&quot;&gt;znz&lt;/a&gt; for discovering this issue.&lt;/p&gt;
+
+&lt;h2&gt;History&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Originally published at 2019-10-01 11:00:00 (UTC)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Posted by mame on 1 Oct 2019&lt;/p&gt;</description>
+      <pubDate>Tue, 01 Oct 2019 11:00:00 +0000</pubDate>
+      <guid>https://www.ruby-lang.org/en/news/2019/10/01/http-response-splitting-in-webrick-cve-2019-16254/</guid>
+      <link>https://www.ruby-lang.org/en/news/2019/10/01/http-response-splitting-in-webrick-cve-2019-16254/</link>
+    </item>
+    
+    <item>
+      <title>CVE-2019-16255: A code injection vulnerability of Shell#[] and Shell#test</title>
+      <description>&lt;p&gt;A code injection vulnerability of Shell#[] and Shell#test in a standard library (lib/shell.rb) was found.  The vulnerability has been assigned the CVE identifier &lt;a href=&quot;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16255&quot;&gt;CVE-2019-16255&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Details&lt;/h2&gt;
+
+&lt;p&gt;Shell#[] and its alias Shell#test defined in lib/shell.rb allow code injection if the first argument (aka the “command” argument) is untrusted data.  An attacker can exploit this to call an arbitrary Ruby method.&lt;/p&gt;
+
+&lt;p&gt;Note that passing untrusted data to methods of Shell is dangerous in general.  Users must never do it.  However, we treat this particular case as a vulnerability because the purpose of Shell#[] and Shell#test is considered file testing.&lt;/p&gt;
+
+&lt;p&gt;All users running an affected release should upgrade immediately.&lt;/p&gt;
+
+&lt;h2&gt;Affected Versions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All releases that are Ruby 2.3 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.4 series: Ruby 2.4.7 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.5 series: Ruby 2.5.6 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.6 series: Ruby 2.6.4 or earlier&lt;/li&gt;
+  &lt;li&gt;Ruby 2.7.0-preview1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Acknowledgement&lt;/h2&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://hackerone.com/ooooooo_q&quot;&gt;ooooooo_q&lt;/a&gt; for discovering this issue.&lt;/p&gt;
+
+&lt;h2&gt;History&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Originally published at 2019-10-01 11:00:00 (UTC)&lt;/li&gt;
+  &lt;li&gt;Fixed minor spelling problem at 2019-10-05 12:00:00 (UTC)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Posted by mame on 1 Oct 2019&lt;/p&gt;</description>
+      <pubDate>Tue, 01 Oct 2019 11:00:00 +0000</pubDate>
+      <guid>https://www.ruby-lang.org/en/news/2019/10/01/code-injection-shell-test-cve-2019-16255/</guid>
+      <link>https://www.ruby-lang.org/en/news/2019/10/01/code-injection-shell-test-cve-2019-16255/</link>
+    </item>
+    
+    <item>
+      <title>Ruby 2.6.4 Released</title>
+      <description>&lt;p&gt;Ruby 2.6.4 has been released.&lt;/p&gt;
+
+&lt;p&gt;This release includes a security fix of rdoc.
+Please check the topics below for details.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/08/28/multiple-jquery-vulnerabilities-in-rdoc/&quot;&gt;Multiple jQuery vulnerabilities in RDoc&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See the &lt;a href=&quot;https://github.com/ruby/ruby/compare/v2_6_3...v2_6_4&quot;&gt;commit logs&lt;/a&gt; for changes in detail.&lt;/p&gt;
+
+&lt;h2&gt;Download&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.4.tar.bz2&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.4.tar.bz2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE:   14426299 bytes
+SHA1:   fa1c7b7f91edb92de449cb1ae665901ba51a8b81
+SHA256: fa1ecc67b99fa13201499002669412eae7cfbe2c30c4f1f4526e8491edfc5fa7
+SHA512: a9fa2f51fb5f86cd8dcaa0925fe6f13d4f19f110b5d4c5fd251f199d16aaf920db39ad3bb50460eb94ab8d471ab2ac8bb54daea4a3bb080eaf45250aac3437fe
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.4.tar.gz&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.4.tar.gz&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE:   16503137 bytes
+SHA1:   2eaddc428cb5d210cfc256a7e6947196ed24355b
+SHA256: 4fc1d8ba75505b3797020a6ffc85a8bcff6adc4dabae343b6572bf281ee17937
+SHA512: 3dad0d98695e10ece015933e96114ffd9a10d3c59d1ead8a9ab041df113aabee3f4100aa7ffe7ef5c43b62ac3c7506c3f3ceeb8828b2a800b6d0f4119d5bf926
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.4.tar.xz&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.4.tar.xz&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE:   11727940 bytes
+SHA1:   6ef7d60b8aaa5efb04de2eb4b682f91bc0ab3910
+SHA256: df593cd4c017de19adf5d0154b8391bb057cef1b72ecdd4a8ee30d3235c65f09
+SHA512: 930a4162fdb008d2446247908c14269fd13db4dc80bd2bb201a65a69c03f5933f97b4c5079ccd2a12db4934ff97b2debaa10a6c6f5c3060e55873f4397747eaa
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.4.zip&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.4.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE:   19922060 bytes
+SHA1:   3e1d98afc7804a291abe42f0b8e2e98219e41ca3
+SHA256: 8446eaaa633a8d55146df0874154b8eb1e5ea5a000d803503d83fd67d9e9372c
+SHA512: 5696f2921b8488bde42536dd23d933c8a5ab9ce33632760d217d79567324c4a20f8007d4815f33e56c0a764d1ca372b40c41a5937f9938bb1d63ea078d10d657
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Comment&lt;/h2&gt;
+
+&lt;p&gt;Many committers, developers, and users who provided bug reports helped us make this release.
+Thanks for their contributions.&lt;/p&gt;
+
+&lt;p&gt;Posted by nagachika on 28 Aug 2019&lt;/p&gt;</description>
+      <pubDate>Wed, 28 Aug 2019 09:00:00 +0000</pubDate>
+      <guid>https://www.ruby-lang.org/en/news/2019/08/28/ruby-2-6-4-released/</guid>
+      <link>https://www.ruby-lang.org/en/news/2019/08/28/ruby-2-6-4-released/</link>
+    </item>
+    
+    <item>
+      <title>Ruby 2.5.6 Released</title>
+      <description>&lt;p&gt;Ruby 2.5.6 has been released.&lt;/p&gt;
+
+&lt;p&gt;This release includes about 40 bug fixes after the previous release, and also includes a security fix.
+Please check the topics below for details.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/en/news/2019/08/28/multiple-jquery-vulnerabilities-in-rdoc/&quot;&gt;Multiple jQuery vulnerabilities in RDoc&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See the &lt;a href=&quot;https://github.com/ruby/ruby/compare/v2_5_5...v2_5_6&quot;&gt;commit log&lt;/a&gt; for details.&lt;/p&gt;
+
+&lt;h2&gt;Download&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.6.tar.bz2&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.6.tar.bz2&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE:   14073430 bytes
+SHA1:   a1b497237770d2a0d1386408fc264ad16f3efccf
+SHA256: 24fc2a417e71150cd2229ec204afc8f467ebb15a8e295aab5d4bceebfb05e18d
+SHA512: e4511d42d19a7bb39ea79f66bb4eca54b63c2a9d27addc035d6d670c1e59ee48a0c6e9c6bc7d082d1f1114b0668831dce3b7422034517f3c4a06ced0e47a7914
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.6.tar.gz&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.6.tar.gz&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE:   17684288 bytes
+SHA1:   d2dd34da5f3b63a0075e50133f60eb35d71b7543
+SHA256: 1d7ed06c673020cd12a737ed686470552e8e99d72b82cd3c26daa3115c36bea7
+SHA512: dc34243129a40b4b16fe171d70bcbdac255819868c608f3ca9f2866124fd6cfde0f3990d5e08a42752427d9066981ca14a634679b9bed5bca9f349a8526d0f35
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.6.tar.xz&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.6.tar.xz&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE:   11323612 bytes
+SHA1:   5008b35d386c4b663b7956a0790b6aa7ae5dc9a9
+SHA256: 7601e4b83f4f17bc1affe091502dd465282ffba0761dea57c071ead21b132cee
+SHA512: 4fe5f8bad5d320f8f17b02ce15afee341e7b0074efcfd98d8944e0cb7c448e0660c4553dd5c0328ee3b49fea3247642f85c60bdce431ed57f58b6326dfd48ee1
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.6.zip&quot;&gt;https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.6.zip&lt;/a&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;SIZE:   21263348 bytes
+SHA1:   4a3859319dd9f1f4d43e2a2bf874ca8233d39b15
+SHA256: c86b0a9bfe47df5639cf134eabd3ebc2711794226ccb02e22094e46aa3e887f4
+SHA512: 8aa96c4e6692ed8c9f8fe4ceb2a91829bb5fa98ef53a4bc85f3a3d0cd66d60bb80985359bd9f7020de7d1cc39c7223559aa20dfdcc01d890624b71b935c6f8da
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Release Comment&lt;/h2&gt;
+
+&lt;p&gt;Thanks to everyone who helped with this release.&lt;/p&gt;
+
+&lt;p&gt;The maintenance of Ruby 2.5, including this release, is based on the “Agreement for the Ruby stable version” of the Ruby Association.&lt;/p&gt;
+
+&lt;p&gt;Posted by usa on 28 Aug 2019&lt;/p&gt;</description>
+      <pubDate>Wed, 28 Aug 2019 09:00:00 +0000</pubDate>
+      <guid>https://www.ruby-lang.org/en/news/2019/08/28/ruby-2-5-6-released/</guid>
+      <link>https://www.ruby-lang.org/en/news/2019/08/28/ruby-2-5-6-released/</link>
+    </item>
+    
+  </channel>
+</rss>
