@@ -6,13 +6,13 @@ RSpec.describe NewsFeedUpdateWorker, type: :worker do
     let(:source) {
         Source.create name: "Ruby", language: "en",
                       homepage_url: "https://www.ruby-lang.org/",
-                      feed_url: "https://www.ruby-lang.org/en/feeds/news.rss"
+                      feed_url: file_fixture("ruby_lang.rss")
     }
 
     let(:source_with_feed_options) {
         Source.create name: "UOL", language: "pt-br",
                       homepage_url: "https://www.uol.com.br/",
-                      feed_url: "http://rss.uol.com.br/feed/noticias.xml",
+                      feed_url: file_fixture("uol.xml"),
                       feed_options: { encoding: "Windows-1252" }
     }
 
