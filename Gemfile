@@ -68,10 +68,9 @@ end
 group :test do
   # Adds support for Capybara system testing and webkit driver
   gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver' # XXX Aparentemente o Cucumber/Capybara quebra sem isso?
-  gem 'capybara-webkit'
+  gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem 'webdrivers', '~> 4.0'
   # Add Sidekiq testing support to RSpec
   gem 'rspec-sidekiq'
 end
