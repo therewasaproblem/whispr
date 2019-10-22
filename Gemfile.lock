@@ -69,6 +69,9 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    capybara-webkit (1.15.1)
+      capybara (>= 2.3, < 4.0)
+      json
     childprocess (2.0.0)
       rake (< 13.0)
     chromedriver-helper (2.1.1)
@@ -315,6 +318,7 @@ DEPENDENCIES
   bootstrap (~> 4.3.1)
   byebug
   capybara (>= 2.15)
+  capybara-webkit
   chromedriver-helper
   coffee-rails (~> 4.2)
   cucumber-rails
