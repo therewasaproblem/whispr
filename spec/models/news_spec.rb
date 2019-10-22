@@ -2,6 +2,7 @@ require 'rails_helper'
 require 'securerandom'
 
 RSpec.describe News, type: :model do
+  # Variáveis que são geradas automaticamente para representar grandes textos,
   let(:very_long_title) { SecureRandom.alphanumeric(2**10) }
   let(:very_long_summary) { SecureRandom.alphanumeric(2**20) }
 
