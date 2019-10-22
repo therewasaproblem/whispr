@@ -5,6 +5,10 @@ env:
 language: ruby
 services:
   - postgresql
+before_install:
+  # Instalar dependências do Capybara-Webkit
+  - sudo apt-get update
+  - sudo apt-get install -y g++ qt5-default libqt5webkit5-dev gstreamer1.0-plugins-base gstreamer1.0-tools gstreamer1.0-x
 before_script:
   # Configurar reporter de test coverage do CodeClimate.
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -15,6 +19,7 @@ before_script:
   - cp config/database.yml.travis config/database.yml
 script:
   - bundle exec rake spec
-  - bundle exec rake spec:features
+  # Rodar o cucumber em um servidor X virtual, para utilizar o WebKit.
+  - xvfb-run bundle exec cucumber
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
