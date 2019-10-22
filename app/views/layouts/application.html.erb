@@ -57,7 +57,7 @@
             <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
-        <%= form_tag({ controller: "/rss", action: "search" }, method: "get", class: "form-inline my-2 my-lg-0") do %>
+        <%= form_tag({ controller: "/news", action: "search" }, method: "get", class: "form-inline my-2 my-lg-0") do %>
           <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
         <% end %>

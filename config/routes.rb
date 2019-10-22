@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
     root 'application#hello'
     devise_for :users
-    get "/rss", to: "rss#index"
-    get "/rss/search", to: "rss#search"
-    get "/about", to: "about#index"
+    get "/news", to: "news#index"
+    get "/news/search", to: "news#search"
 end

@@ -1,4 +1,4 @@
-<h1>Notícias à respeito de <%= @keyword %> </h1>
+<h1 class="text-white">Notícias à respeito de <%= @keyword %> </h1>
 
 <% @items.each do |item| %>
     <%= render partial: "news_card", locals: { item: item } %>

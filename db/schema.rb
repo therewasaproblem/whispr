@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_22_153657) do
+ActiveRecord::Schema.define(version: 2019_09_27_143958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_09_22_153657) do
     t.integer "source_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index "url, md5((title)::text), md5(summary)", name: "index_news_on_url_and_title_and_summary", unique: true
   end
 
   create_table "sources", force: :cascade do |t|
@@ -38,6 +39,8 @@ ActiveRecord::Schema.define(version: 2019_09_22_153657) do
     t.text "homepage_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "feed_url"
+    t.jsonb "feed_options", default: {}, null: false
   end
 
   create_table "user_preferences", force: :cascade do |t|
