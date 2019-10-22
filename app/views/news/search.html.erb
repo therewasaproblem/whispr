@@ -1,4 +1,8 @@
-<h1 class="text-white">Notícias à respeito de <%= @keyword %> </h1>
+<% if @items.length > 0 %>
+    <h1 class="text-white">Notícias à respeito de <%= @keyword %></h1>
+<% else %>
+    <h1 class="text-white">Nenhuma notícia encontrada</h1>
+<% end %>
 
 <% @items.each do |item| %>
     <%= render partial: "news_card", locals: { item: item } %>
