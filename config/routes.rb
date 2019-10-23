@@ -3,4 +3,5 @@ Rails.application.routes.draw do
     devise_for :users
     get "/news", to: "news#index"
     get "/news/search", to: "news#search"
+    get "/about", to: "about#index"
 end
