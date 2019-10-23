@@ -5,6 +5,8 @@ env:
 language: ruby
 services:
   - postgresql
+addons:
+  chrome: stable
 before_script:
   # Configurar reporter de test coverage do CodeClimate.
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -15,6 +17,7 @@ before_script:
   - cp config/database.yml.travis config/database.yml
 script:
   - bundle exec rake spec
-  - bundle exec rake spec:features
+  # Rodar o cucumber em um servidor X virtual, para utilizar o WebKit.
+  - bundle exec cucumber
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
