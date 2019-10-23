@@ -3,6 +3,7 @@ env:
     # Talvez isso devesse ser um secret no Travis :thinking:
     - CC_TEST_REPORTER_ID=4d782e3f27eeabeabe8185e9c98f1a00aeb311c336998eeac6d9ca6e80ea2755
 language: ruby
+cache: bundler
 services:
   - postgresql
 addons:
