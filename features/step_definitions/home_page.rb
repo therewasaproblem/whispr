@@ -1,4 +1,4 @@
-Given /^I am on the home page and not logged in$/ do
+Given /^I am on the home page and not signed in$/ do
   visit "/"
 end
  
@@ -7,6 +7,6 @@ Then /^I should see "([^"]*)"$/ do |text|
 end
 
 
-Given /^I am on the home page and logged in$/ do
+Given /^I am on the home page and signed in$/ do
   visit "/"
 end
