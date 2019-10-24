@@ -1,5 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe UserPreference, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should create a relation with existing references" do
+    # Para conseguir criar esse teste, precisamos definir
+    # objetos que de fato existam.
+    # TODO (Lucas): fazer factory
+    user = User.create(username:"test",
+                    password: "senhaComplicada",
+                    email: "test@test.com")
+    category = Category.create( tag:"test",
+                                description: "Categoria teste")
+
+    user_p = UserPreference.new user_id: user.id,
+                                category_id: category.id
+
+    expect(user_p.save).to be true
+  end
 end
