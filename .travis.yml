@@ -1,9 +1,24 @@
+env:
+  global:
+    # Talvez isso devesse ser um secret no Travis :thinking:
+    - CC_TEST_REPORTER_ID=4d782e3f27eeabeabe8185e9c98f1a00aeb311c336998eeac6d9ca6e80ea2755
 language: ruby
+cache: bundler
 services:
   - postgresql
+addons:
+  chrome: stable
 before_script:
+  # Configurar reporter de test coverage do CodeClimate.
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+  # Configurar DB de teste.
   - psql -c 'create database whispr_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
 script:
   - bundle exec rake spec
-  - bundle exec rake spec:features
+  # Rodar o cucumber em um servidor X virtual, para utilizar o WebKit.
+  - bundle exec cucumber
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
