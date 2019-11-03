@@ -2,9 +2,9 @@
   <h2 class="text-white"> Notícias para você </h2>
 
   <% @items.each do |item| %>
-      <%= render partial: "news_card", locals: { item: item } %>
+      <%= render partial: "news/news_card", locals: { item: item } %>
   <% end %>
-  
+
 <% else %>
   <h1 class="center text-white" vertical-align="text-bottom"> Bem Vindo! </h1>
   <%= link_to new_user_registration_path do %>
