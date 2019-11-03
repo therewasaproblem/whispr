@@ -4,7 +4,6 @@ RSpec.describe UserPreference, type: :model do
   it "should create a relation with existing references" do
     # Para conseguir criar esse teste, precisamos definir
     # objetos que de fato existam.
-    # TODO (Lucas): fazer factory
     user = User.create(username:"test",
                     password: "senhaComplicada",
                     email: "test@test.com")
