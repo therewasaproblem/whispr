@@ -9,5 +9,4 @@ Feature: Home Page
 
 	Scenario: At home page and signed in
 		Given I am on the home page and signed in
-		Then I should see "Bem Vindo!"
-		And I should see "O que deseja procurar hoje?"
+		Then I should see "Notícias para você"
