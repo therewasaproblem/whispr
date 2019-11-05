@@ -5,32 +5,81 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Source.create name: "UOL", language: "pt-br",
+Source.create name: "UOL Tecnologia", language: "pt-br",
               homepage_url: "https://www.uol.com.br/",
-              feed_url: "http://rss.uol.com.br/feed/noticias.xml",
-              feed_options: { encoding: "Windows-1252" }
+              feed_url: "http://rss.uol.com.br/feed/tecnologia.xml",
+              feed_options: { encoding: "Windows-1252" },
+              categories_id: 1
 
-Source.create name: "Folha Mundo", language: "pt-br",
-              homepage_url: "https://www1.folha.uol.com.br/mundo/",
-              feed_url: "https://feeds.folha.uol.com.br/mundo/rss091.xml"
+Source.create name: "UOL Educacao", language: "pt-br",
+              homepage_url: "https://www.uol.com.br/",
+              feed_url: "http://rss.uol.com.br/feed/vestibular.xml",
+              feed_options: { encoding: "Windows-1252" },
+              categories_id: 2
+
+Source.create name: "G1 Tecnologia", language: "pt-br",
+              homepage_url: "https://g1.globo.com/",
+              feed_url: "https://g1.globo.com/rss/g1/tecnologia/",
+              categories_id: 1
+
+Source.create name: "G1 Educacao", language: "pt-br",
+              homepage_url: "https://g1.globo.com/",
+              feed_url: "https://g1.globo.com/rss/g1/educacao/",
+              categories_id: 2
+
+Source.create name: "G1 Saude", language: "pt-br",
+              homepage_url: "https://g1.globo.com/",
+              feed_url: "https://g1.globo.com/rss/g1/ciencia-e-saude/",
+              categories_id: 3
+
+Source.create name: "G1 Natureza", language: "pt-br",
+              homepage_url: "https://g1.globo.com/",
+              feed_url: "https://g1.globo.com/rss/g1/natureza/",
+              categories_id: 4
+
+Source.create name: "G1 PLaneta", language: "pt-br",
+              homepage_url: "https://g1.globo.com/",
+              feed_url: "https://g1.globo.com/rss/g1/planeta-bizarro/",
+              categories_id: 4
+
+Source.create name: "G1 Politica", language: "pt-br",
+              homepage_url: "https://g1.globo.com/",
+              feed_url: "https://g1.globo.com/rss/g1/politica",
+              categories_id: 5
 
 Source.create name: "Folha Educacao", language: "pt-br",
-              homepage_url: "https://www1.folha.uol.com.br/educacao/",
-              feed_url: "https://feeds.folha.uol.com.br/educacao/rss091.xml"
+              homepage_url: "https://www1.folha.uol.com.br/mundo/",
+              feed_url: "https://feeds.folha.uol.com.br/educacao/rss091.xml",
+              categories_id: 2
 
-Source.create name: "G1", language: "pt-br",
-              homepage_url: "https://g1.globo.com/",
-              feed_url: "https://g1.globo.com/rss/g1/"
+Source.create name: "Folha Natureza", language: "pt-br",
+              homepage_url: "https://www1.folha.uol.com.br/mundo/",
+              feed_url: "https://feeds.folha.uol.com.br/ambiente/rss091.xml",
+              categories_id: 4
+
+Source.create name: "Folha Politica", language: "pt-br",
+              homepage_url: "https://www1.folha.uol.com.br/mundo/",
+              feed_url: "https://feeds.folha.uol.com.br/poder/rss091.xml",
+              categories_id: 5
+
+Source.create name: "BBC Saude", language: "pt-br",
+              homepage_url: "https://www.bbc.com/portuguese/",
+              feed_url: "https://www.bbc.com/portuguese/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+              categories_id: 3
 
 Source.create name: "Tecmundo", language: "pt-br",
               homepage_url: "https://www.tecmundo.com.br/",
-              feed_url: "https://www.tecmundo.com.br/rss"
-
-Source.create name: "BBC Primeira Página", language: "pt-br",
-              homepage_url: "https://www.bbc.com/portuguese",
-              feed_url: "http://feeds.bbci.co.uk/portuguese/rss.xml"
+              feed_url: "https://www.tecmundo.com.br/rss",
+              categories_id: 1
 
 Source.create name: "Valor", language: "pt-br",
               homepage_url: "https://www.valor.com.br",
-              feed_url: "https://www.valor.com.br/rss"
+              feed_url: "https://www.valor.com.br/politica/rss",
+              categories_id: 5
+
+Category.create tag: "Tecnologia", description: "Fontes a respeito de Tecnologias"
+Category.create tag: "Educacao", description: "Fontes a respeito de Educacao"
+Category.create tag: "Saude", description: "Fontes a respeito de Saude"
+Category.create tag: "Natureza", description: "Fontes a respeito da Natureza"
+Category.create tag: "Politica", description: "Fontes a respeito de Politica"
 
