@@ -12,24 +12,6 @@ sau = Category.create tag: "Saude", description: "Fontes a respeito de Saude"
 nat = Category.create tag: "Natureza", description: "Fontes a respeito da Natureza"
 pol =  Category.create tag: "Politica", description: "Fontes a respeito de Politica"
 
-#category_list = [
-#	["Tecnologia", "Fontes a respeito de Tecnologias"],
-#	["Educacao", "Fontes a respeito de Educacao"],
-#	["Saude", "Fontes a respeito de Saude"],
-#	["Natureza", "Fontes a respeito da Natureza"],
-#	["Politica", "Fontes a respeito de Politica"]
-#]
-
-#category_list.each do |tag, desc|
-#	Category.create tag: tag, description: desc
-#end
-
-#tec = Category.select(:id).where("tag = 'Tecnologia'").first.attributes.values
-#edu = Category.select(:id).where("tag = 'Educacao'").first.attributes.values
-#saude = Category.select(:id).where("tag = 'Saude'").first.attributes.values
-#nat = Category.select(:id).where("tag = 'Natureza'").first.attributes.values
-#pol = Category.select(:id).where("tag = 'Politica'").first.attributes.values
-
 Source.create name: "UOL Tecnologia", language: "pt-br",
               homepage_url: "https://www.uol.com.br/",
               feed_url: "http://rss.uol.com.br/feed/tecnologia.xml",
