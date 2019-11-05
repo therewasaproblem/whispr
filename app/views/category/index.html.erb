@@ -1,153 +1,35 @@
-	<!DOCTYPE html>
-<html lang="pt">
-<style>
-body{
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-image: linear-gradient(to right top, #533fde, #273cb9, #003593, #002b6c, #001f45, #042a4a, #11344d, #213e50, #2a697f, #3097ab, #3ec8d2, #5ffbf1);
-    font-family: Oswald;
-}
+<% if user_signed_in? %>
 
-.containerA{
-    width: 1000px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
 
-.containerA .cardA{
-    position: relative;
-    cursor: pointer;
-}
+<h2 class="text-white">Selecione suas categorias preferidas!</h2>
 
-.containerA .cardA .face{
-    width: 300px;
-    height: 200px;
-    transition: 0.5s;
-}
-
-.containerA .cardA .face.face1{
-    position: relative;
-    background: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    transform: translateY(100px);
-}
-
-.containerA .cardA:hover .face.face1{
-    background-image: linear-gradient(to right top, #533fde, #273cb9, #003593, #002b6c, #001f45, #042a4a, #11344d, #213e50, #2a697f, #3097ab, #3ec8d2, #5ffbf1);
-    transform: translateY(0);
-}
-
-.containerA .cardA .face.face1 .content{
-    opacity: 0.2;
-    transition: 0.5s;
-}
-
-.containerA .cardA:hover .face.face1 .content{
-    opacity: 1;
-}
-
-.containerA .cardA .face.face1 .content img{
-    max-width: 100px;
-}
-
-.containerA .cardA .face.face1 .content h3{
-    margin: 10px 0 0;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.containerA .cardA .face.face2{
-    position: relative;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    transform: translateY(-100px);
-}
-
-.containerA .cardA:hover .face.face2{
-    transform: translateY(0);
-}
-
-.containerA .cardA .face.face2 .content p{
-    margin: 0;
-    padding: 0;
-}
-
-.containerA .cardA .face.face2 .content a{
-    margin: 15px 0 0;
-    display:  inline-block;
-    text-decoration: none;
-    font-weight: 900;
-    color: #333;
-    padding: 5px;
-    border: 1px solid #333;
-}
-
-.containerA .cardA .face.face2 .content a:hover{
-    background: #333;
-    color: #fff;
-}
-</style>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Whispr</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<% if user_signed_in? %>
-	<h2 class="text-white">Selecione suas categorias preferidas!</h2>
+<%= form_tag({ controller: "category", action: "submit" }, method: "post") do %>
+	<% @category_list.each do |category| %>
 
 	<div>
-	  <input type="checkbox" id="tecnologia" name="tecnologia">
-	  <label for="tecnologia" class="text-white">Tecnologia</label>
-	</div>
-
-	<div>
-	  <input type="checkbox" id="educacao" name="educacao">
-	  <label for="educacao" class="text-white">Educação</label>
-	</div>
-
-	<div>
-	  <input type="checkbox" id="saude" name="saude">
-	  <label for="saude" class="text-white">Saúde</label>
-	</div>
-
-	<div>
-	  <input type="checkbox" id="natureza" name="natureza">
-	  <label for="natureza" class="text-white">Natureza</label>
-	</div>
-
-	<div>
-	  <input type="checkbox" id="politica" name="politica">
-	  <label for="politica" class="text-white">Política</label>
-	</div>
-
-	<button type="button" onclick="alert('Certamente Não foi Salvo')">Salvar</button>
-	<% else %>
-	<h2 class="text-white" align="center">É necessário estar Logado para selecionar as categorias preferidas.</h2>
-	<p>
-	<div align="center">
-		<%= button_to "Redirecionar para Entrar",  new_user_session_path, method: "get"%>
-	</div>
-	<p>
-	<div align="center">
-		<%= button_to "Redirecionar para Cadastrar",  new_user_registration_path, method: "get"%>
+	  <input type="checkbox" id="<%= category.tag %>" name="categories_ids[]" value="<%= category.id %>" 
+		<% if @user.categories.exists?(category.id) %>
+			checked
+		<% end %>>
+	  <label for="<%= category.tag %>" class="text-white"><%= category.tag %></label>
 	</div>
 	<% end %>
 
-</body>
-</html>
+	<input type="submit">
+<% end %>
+
+
+
+
+
+<% else %>	
+<h2 class="text-white" align="center">É necessário estar Logado para selecionar as categorias preferidas.</h2>
+<p>
+<div align="center">
+	<%= button_to "Redirecionar para Entrar",  new_user_session_path, method: "get"%>
+</div>
+<p>
+<div align="center">
+	<%= button_to "Redirecionar para Cadastrar",  new_user_registration_path, method: "get"%>
+</div>
+<% end %>

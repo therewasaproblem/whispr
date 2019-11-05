@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     get "/news/search", to: "news#search"
     get "/category", to: "category#index"
     get "/about", to: "about#index"
+    post "/category/submit", to: "category#submit"
 end
