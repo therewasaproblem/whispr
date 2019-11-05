@@ -6,7 +6,7 @@ class NewsController < ActionController::Base
     end
 
     def search
-	    @keyword = params[:q]
+	@keyword = params[:q]
         @items = News.order(id: :desc)
                      .where("title ILIKE ?", "%#{@keyword}%").limit(20)
         render "search", layout: "application"
