@@ -13,5 +13,21 @@ class NewsController < ActionController::Base
     end
 
  
-    
+    def searchLikeUp
+	if user_signed_in?
+        news = News.find(params[:id])
+    	news.access = news.access + 1
+	news.save
+	render html: news.access
+    	end
+    end
+
+    def searchLikeDown
+	if user_signed_in?
+        news = News.find(params[:id])
+    	news.access = news.access - 1
+	news.save
+	render html: news.access
+        end	
+    end
 end
