@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_22_005845) do
+ActiveRecord::Schema.define(version: 2019_11_05_202127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(version: 2019_10_22_005845) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "categories_users", id: false, force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.bigint "user_id", null: false
   end
 
   create_table "news", force: :cascade do |t|
@@ -41,13 +46,8 @@ ActiveRecord::Schema.define(version: 2019_10_22_005845) do
     t.datetime "updated_at", null: false
     t.string "feed_url"
     t.jsonb "feed_options", default: {}, null: false
-  end
-
-  create_table "user_categories", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "categories_id"
-    t.index ["categories_id"], name: "index_user_categories_on_categories_id"
-    t.index ["users_id"], name: "index_user_categories_on_users_id"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_sources_on_category_id"
   end
 
   create_table "user_news", force: :cascade do |t|
@@ -80,4 +80,5 @@ ActiveRecord::Schema.define(version: 2019_10_22_005845) do
 
   add_foreign_key "news", "categories"
   add_foreign_key "news", "sources"
+  add_foreign_key "sources", "categories"
 end
