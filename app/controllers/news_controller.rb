@@ -11,4 +11,7 @@ class NewsController < ActionController::Base
                      .where("title ILIKE ?", "%#{@keyword}%").limit(20)
         render "search", layout: "application"
     end
+
+ 
+    
 end

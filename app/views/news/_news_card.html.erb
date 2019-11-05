@@ -9,6 +9,14 @@
         <button type="button" class="btn btn-primary">Ler a notícia</button>
 	</a>
 	<a target=_blank class="card-link">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<button type="button" onclick="upvoteID(<%= item.id %>)" class="btn btn-primary">
+	<i class="fa fa-thumbs-up"></i>
+	<button type="button" onclick="downvoteID(<%= item.id %>)" class="btn btn-primary">
+	<i class="fa fa-thumbs-down"></i>
+	</button>
+	</button>
+	<span id="like_button_<%= item.id %>" class="badge"><%= item.access%></span>		
     </div>	
 </div>
