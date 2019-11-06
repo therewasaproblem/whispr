@@ -4,8 +4,6 @@
         <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
         <p class="card-text"><%= strip_tags(item.summary) %></p>
         <a href="<%= item.url %>" target=_blank class="card-link">Ler a notícia</a>
-        <% if user_signed_in? %>
-            <%= link_to "Salvar nas favoritas", {:controller => "favorites", :action => "save", :id => item.id }, method: :post, :class => "card-link"%>
-        <% end %>
+        <%= link_to "Excluir das favoritas", {:controller => "favorites", :action => "delete", :id => item.id }, method: :delete, :class => "card-link"%>
     </div>
 </div>

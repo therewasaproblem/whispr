@@ -1,0 +1,9 @@
+<% if @items.length > 0 %>
+    <h1 class="text-white">Notícias favoritas</h1>
+<% else %>
+    <h1 class="text-white">Nenhuma notícia favoritada</h1>
+<% end %>
+
+<% @items.each do |item| %>
+    <%= render partial: "favorites_card", locals: { item: item } %>
+<% end %>
