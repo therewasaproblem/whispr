@@ -20,12 +20,12 @@ RSpec.describe UpdateAllSourcesWorker, type: :worker do
         ]
     }
 
-    it "should add news to the database" do
-        expect(News.count).to eq(0)
-        
-        UpdateAllSourcesWorker.perform_async
-        Sidekiq::Worker.drain_all # Isso força todos os workers a terminarem.
-
-        expect(News.count).to be > 0
+    it "should call NewsFeedUpdateWorker" do
+        expect {       
+            UpdateAllSourcesWorker.perform_async
+            UpdateAllSourcesWorker.drain # Isso força todos os workers a terminarem.
+        }.to change {
+            NewsFeedUpdateWorker.jobs.size
+        }.by @sources.length
     end
 end
