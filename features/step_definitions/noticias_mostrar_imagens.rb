@@ -11,5 +11,5 @@ Quando /^procuro por notícias$/ do
 end
 
 Então /^eu deveria ver imagens nas notícias$/ do
-    expect(page).to have_css(".news-card img")
+    expect(page).to have_css(".news-card div.card-image")
 end
