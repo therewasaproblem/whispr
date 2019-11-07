@@ -20,10 +20,14 @@ RSpec.describe UpdateAllSourcesWorker, type: :worker do
         ]
     }
 
-    it "should call NewsFeedUpdateWorker" do
+    it "should enqueue NewsFeedUpdateWorker jobs" do
+        # Neste teste, estamos no modo "fake" do Sidekiq, onde os jobs são
+        # enfileirados, mas não rodados de verdade. Aproveitamos disso para
+        # testar de modo fino o que cada worker faz.
         expect {       
             UpdateAllSourcesWorker.perform_async
-            UpdateAllSourcesWorker.drain # Isso força todos os workers a terminarem.
+            # Usando o drain, fazemos este worker em específico executar.
+            UpdateAllSourcesWorker.drain
         }.to change {
             NewsFeedUpdateWorker.jobs.size
         }.by @sources.length
