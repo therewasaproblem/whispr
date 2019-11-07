@@ -57,19 +57,11 @@ ActiveRecord::Schema.define(version: 2019_11_07_003945) do
     t.jsonb "feed_options", default: {}, null: false
   end
 
-<<<<<<< Updated upstream
-  create_table "sources_users", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "source_id"
-    t.index ["source_id"], name: "index_sources_users_on_source_id"
-    t.index ["user_id"], name: "index_sources_users_on_user_id"
-=======
   create_table "sources_news", id: false, force: :cascade do |t|
     t.bigint "source_id"
     t.bigint "user_id"
     t.index ["source_id"], name: "index_sources_news_on_source_id"
     t.index ["user_id"], name: "index_sources_news_on_user_id"
->>>>>>> Stashed changes
   end
 
   create_table "users", force: :cascade do |t|
