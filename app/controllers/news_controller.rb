@@ -7,27 +7,18 @@ class NewsController < ActionController::Base
 
     def search
 	@keyword = params[:q]
-        @items = News.order(id: :desc)
-                     .where("title ILIKE ?", "%#{@keyword}%").limit(20)
+        @items = News.order(id: :desc).where("title ILIKE ?", "%#{@keyword}%").limit(20)
         render "search", layout: "application"
     end
 
  
-    def searchLikeUp
+    def news_access_counter
 	if user_signed_in?
         news = News.find(params[:id])
     	news.access = news.access + 1
 	news.save
 	render html: news.access
-    	end
-    end
-
-    def searchLikeDown
-	if user_signed_in?
-        news = News.find(params[:id])
-    	news.access = news.access - 1
-	news.save
-	render html: news.access
-        end	
+	else render html: 0    	
+	end
     end
 end

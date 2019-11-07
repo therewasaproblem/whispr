@@ -1,7 +1,7 @@
 <script>
-	function upvoteID(id){
+	function access_counter(id){
     		$.ajax({
-       		'url' : '/news/like',
+       		'url' : '/news/access',
         	'type' : 'GET',
         	'data' : {id},
         	'success' : function(data) {              
@@ -13,26 +13,6 @@
         	}
     		});
 	}
-
-	function downvoteID(id){
-    		$.ajax({
-
-       		'url' : '/news/dislike',
-        	'type' : 'GET',
-        	'data' : {id},
-        	'success' : function(data) {              
-            		document.getElementById("like_button_" + id).innerHTML = data
-        	},
-        	'error' : function(request,error)
-        	{
-            	alert("Erro no sistema");
-        	}
-    		});
-	}
-	
-	function downVoteImage(x) {
-		x.classList.toggle("fa-thumbs-down");
-	} 
 </script>
 
 <div class="card border-light mb-3">
@@ -41,17 +21,7 @@
         <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
         <p class="card-text"><%= strip_tags(item.summary) %></p>
 	<a href="<%= item.url %> "target=_blank class="card-link">
-        <button type="button" class="btn btn-primary">Ler a notícia</button>
-	</a>
-	<a target=_blank class="card-link">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<button type="button" onclick="upvoteID(<%= item.id %>)" class="btn btn-primary">
-	<i class="fa fa-thumbs-up"></i>
-	<button type="button" onclick="downvoteID(<%= item.id %>)" class="btn btn-primary">
-	<i class="fa fa-thumbs-down"></i>
-	</button>
-	</button>
-	<span id="like_button_<%= item.id %>" class="badge"><%= item.access%></span>		
+        <button type="button" onclick="access_counter(<%= item.id %>)" class="btn btn-primary">Ler a notícia
+	<span id="like_button_<%= item.id %>" class="badge"><%= item.access%></span></button></a>	
     </div>	
 </div>
