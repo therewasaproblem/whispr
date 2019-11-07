@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 2019_11_07_003945) do
     t.datetime "updated_at", null: false
     t.string "feed_url"
     t.jsonb "feed_options", default: {}, null: false
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_sources_on_category_id"
   end
 
   create_table "sources_news", id: false, force: :cascade do |t|
