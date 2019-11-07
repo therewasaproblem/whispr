@@ -15,6 +15,9 @@ class NewsFeedUpdateWorker
                 category_id: category_id
             )
 
+            # Tentar extrair imagem com OpenGraph
+            news.image_url = OpengraphExtractor.extract_image_from_url(news.url)
+
             begin
                 news.save
             rescue ActiveRecord::RecordNotUnique

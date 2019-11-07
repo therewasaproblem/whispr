@@ -27,7 +27,9 @@ default: &default
   password: postgres
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # Por padrão, o Sidekiq usa 10 threads, e 5 conexões do Redis, portanto
+  # definimos o número padrão de conexões para 15.
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 15 } %>
 
 development:
   <<: *default
