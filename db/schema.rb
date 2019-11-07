@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 2019_11_07_014640) do
     t.datetime "updated_at", null: false
     t.string "feed_url"
     t.jsonb "feed_options", default: {}, null: false
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_sources_on_category_id"
   end
 
   create_table "sources_users", id: false, force: :cascade do |t|
@@ -80,4 +82,5 @@ ActiveRecord::Schema.define(version: 2019_11_07_014640) do
 
   add_foreign_key "news", "categories"
   add_foreign_key "news", "sources"
+  add_foreign_key "sources", "categories"
 end

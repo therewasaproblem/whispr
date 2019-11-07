@@ -1,0 +1,35 @@
+<% if user_signed_in? %>
+
+
+<h2 class="text-white">Selecione suas categorias preferidas!</h2>
+
+<%= form_tag({ controller: "category", action: "submit" }, method: "post") do %>
+	<% @category_list.each do |category| %>
+
+	<div>
+	  <input type="checkbox" id="<%= category.tag %>" name="categories_ids[]" value="<%= category.id %>" 
+		<% if @user.categories.exists?(category.id) %>
+			checked
+		<% end %>>
+	  <label for="<%= category.tag %>" class="text-white"><%= category.tag %></label>
+	</div>
+	<% end %>
+
+	<input type="submit">
+<% end %>
+
+
+
+
+
+<% else %>	
+<h2 class="text-white" align="center">É necessário estar Logado para selecionar as categorias preferidas.</h2>
+<p>
+<div align="center">
+	<%= button_to "Redirecionar para Entrar",  new_user_session_path, method: "get"%>
+</div>
+<p>
+<div align="center">
+	<%= button_to "Redirecionar para Cadastrar",  new_user_registration_path, method: "get"%>
+</div>
+<% end %>
