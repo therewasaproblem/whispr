@@ -14,18 +14,18 @@ class FixingAssociations < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    create_table :sources_users do |t|
-      t.belongs_to :user
-      t.belongs_to :source
+    create_table :user_sources do |t|
+      t.belongs_to :users
+      t.belongs_to :sources
     end
 
-    create_table :categories_users do |t|
-      t.belongs_to :user
-      t.belongs_to :category
+    create_table :user_categories do |t|
+      t.belongs_to :users
+      t.belongs_to :categories
     end
 
-    create_table :news_users do|t|
-      t.belongs_to :user
+    create_table :user_news do|t|
+      t.belongs_to :users
       t.belongs_to :news
     end
 

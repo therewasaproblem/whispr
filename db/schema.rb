@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_05_202127) do
+ActiveRecord::Schema.define(version: 2019_11_07_003945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,9 +40,9 @@ ActiveRecord::Schema.define(version: 2019_11_05_202127) do
     t.index "url, md5((title)::text), md5(summary)", name: "index_news_on_url_and_title_and_summary", unique: true
   end
 
-  create_table "news_users", force: :cascade do |t|
-    t.bigint "user_id"
+  create_table "news_users", id: false, force: :cascade do |t|
     t.bigint "news_id"
+    t.bigint "user_id"
     t.index ["news_id"], name: "index_news_users_on_news_id"
     t.index ["user_id"], name: "index_news_users_on_user_id"
   end
@@ -57,11 +57,19 @@ ActiveRecord::Schema.define(version: 2019_11_05_202127) do
     t.jsonb "feed_options", default: {}, null: false
   end
 
+<<<<<<< Updated upstream
   create_table "sources_users", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "source_id"
     t.index ["source_id"], name: "index_sources_users_on_source_id"
     t.index ["user_id"], name: "index_sources_users_on_user_id"
+=======
+  create_table "sources_news", id: false, force: :cascade do |t|
+    t.bigint "source_id"
+    t.bigint "user_id"
+    t.index ["source_id"], name: "index_sources_news_on_source_id"
+    t.index ["user_id"], name: "index_sources_news_on_user_id"
+>>>>>>> Stashed changes
   end
 
   create_table "users", force: :cascade do |t|

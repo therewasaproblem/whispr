@@ -9,4 +9,7 @@ Rails.application.routes.draw do
     get "/category", to: "category#index"
     get "/about", to: "about#index"
     post "/category/submit", to: "category#submit"
+    get "/favorites/index", to: "favorites#index"
+    post "/favorites/save/:id", to: "favorites#save"
+    delete "/favorites/delete/:id", to: "favorites#delete"
 end
