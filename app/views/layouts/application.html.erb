@@ -28,12 +28,9 @@
               Home
             <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Config</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Select by
+              Opções
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Favourites</a>
@@ -44,17 +41,11 @@
                 HOT
                 </p>
               </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="about">
               Sobre
             <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
         <%= form_tag({ controller: "/news", action: "search" }, method: "get", class: "form-inline my-2 my-lg-0") do %>
@@ -72,7 +63,7 @@
                 <a class="dropdown-item" href="#">Sua Conta</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Perfil</a>
-                <a class="dropdown-item" href="#">HOT</a>
+                <a class="dropdown-item" href="#">Favoritos</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Configurações</a>
                 <%= link_to "Sair", destroy_user_session_path, method: :delete, :class => "dropdown-item"%>

@@ -1,8 +1,11 @@
 <h1 class="center text-white" vertical-align="text-bottom"> Bem Vindo! </h1>
+<% if user_signed_in? %>
+<% else %>
 <%= link_to new_user_registration_path do %>
 <div class="button instagram"><span class="gradient"></span>Cadastrar</div>
 <% end %>
 <br>
 <%= link_to new_user_session_path do %>
 <div class="button instagram"><span class="gradient"></span>Entrar</div>
+<% end %>
 <% end %>
