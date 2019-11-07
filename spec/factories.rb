@@ -10,4 +10,9 @@ FactoryBot.define do
         password { "senhaComplicada" }
         email { "test@test.com" }
     end
+
+    factory :category do
+       tag { "test" }
+       description { "Categoria Teste" }
+    end
 end
