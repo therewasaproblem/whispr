@@ -2,7 +2,6 @@ class CreateJoinTables < ActiveRecord::Migration[5.2]
   def change
     drop_table :user_sources
     drop_table :user_news
-    drop_table :user_categories
 
     create_join_table :categories, :users do |t|
       t.index :category_id
