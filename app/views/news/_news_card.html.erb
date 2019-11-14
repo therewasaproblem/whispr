@@ -1,11 +1,18 @@
-<div class="card border-light mb-3">
+<div class="news-card card border-light mb-3 d-flex flex-row">
+    <% if item.image_url %>
+        <div class="card-image" style="background-image: url('<%= item.image_url %>');"></div>
+    <% end %>
     <div class="card-body">
         <h5 class="card-title"><%= item.title %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
         <p class="card-text"><%= strip_tags(item.summary) %></p>
         <a href="<%= item.url %>" target=_blank class="card-link">Ler a notícia</a>
         <% if user_signed_in? %>
-            <%= link_to "Salvar nas favoritas", {:controller => "favorites", :action => "save", :id => item.id }, method: :post, :class => "card-link"%>
+            <% if !current_user.news.exists?(item.id) %>
+                <%= link_to "Salvar nas favoritas", {:controller => "favorites", :action => "save", :id => item.id }, method: :post, :class => "card-link"%>
+            <% else %>
+                <%= link_to "Excluir das favoritas", {:controller => "favorites", :action => "delete", :id => item.id }, method: :delete, :class => "card-link"%>
+            <% end %>
         <% end %>
     </div>
 </div>

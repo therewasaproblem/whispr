@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_05_202127) do
+ActiveRecord::Schema.define(version: 2019_11_07_014640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_11_05_202127) do
   create_table "categories_users", id: false, force: :cascade do |t|
     t.bigint "category_id", null: false
     t.bigint "user_id", null: false
+    t.index ["category_id"], name: "index_categories_users_on_category_id"
+    t.index ["user_id"], name: "index_categories_users_on_user_id"
   end
 
   create_table "news", force: :cascade do |t|
@@ -35,12 +37,13 @@ ActiveRecord::Schema.define(version: 2019_11_05_202127) do
     t.integer "source_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
     t.index "url, md5((title)::text), md5(summary)", name: "index_news_on_url_and_title_and_summary", unique: true
   end
 
-  create_table "news_users", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "news_id"
+  create_table "news_users", id: false, force: :cascade do |t|
+    t.bigint "news_id", null: false
+    t.bigint "user_id", null: false
     t.index ["news_id"], name: "index_news_users_on_news_id"
     t.index ["user_id"], name: "index_news_users_on_user_id"
   end
@@ -57,18 +60,11 @@ ActiveRecord::Schema.define(version: 2019_11_05_202127) do
     t.index ["category_id"], name: "index_sources_on_category_id"
   end
 
-  create_table "user_news", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "news_id"
-    t.index ["news_id"], name: "index_user_news_on_news_id"
-    t.index ["users_id"], name: "index_user_news_on_users_id"
-  end
-
-  create_table "user_sources", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "sources_id"
-    t.index ["sources_id"], name: "index_user_sources_on_sources_id"
-    t.index ["users_id"], name: "index_user_sources_on_users_id"
+  create_table "sources_users", id: false, force: :cascade do |t|
+    t.bigint "source_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["source_id"], name: "index_sources_users_on_source_id"
+    t.index ["user_id"], name: "index_sources_users_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -76,11 +72,12 @@ ActiveRecord::Schema.define(version: 2019_11_05_202127) do
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

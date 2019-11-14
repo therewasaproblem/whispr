@@ -72,7 +72,8 @@
                 <a class="dropdown-item" href="#">Sua Conta</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Perfil</a>
-		<%= link_to "Favoritos",  {controller: "/category", action: "index" }, method: "get", :class => "dropdown-item"%>
+                <%= link_to "Categorias",  {controller: "/category", action: "index" }, method: "get", :class => "dropdown-item"%>
+                <%= link_to "Favoritas",  {controller: "/favorites", action: "index" }, method: "get", :class => "dropdown-item"%>
                 <a class="dropdown-item" href="#">HOT</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Configurações</a>

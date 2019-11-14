@@ -3,19 +3,15 @@ class FavoritesController < ActionController::Base
         id = params[:id]
         @user = current_user
         news = News.find(id)
-        if @user.news.where(:id=>id).blank?
-            @user.news << news
-            @user.save
-        end        
+        @user.news << news
+        @user.save        
     end
 
     def delete
         id = params[:id]
         @user = current_user
-        if @user.news.where(:id=>id).present?
-            news = @user.news.find(id)
-            @user.news.delete(news)
-        end
+        news = @user.news.find(id)
+        @user.news.delete(news)
     end    
 
     def index
