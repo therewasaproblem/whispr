@@ -73,6 +73,13 @@ h1 {
 	animation: 18s linear 0s infinite move;
 }
 
+count{
+  padding-left:10%;
+  width:30%;
+  height:30%;
+  align:"left";
+}
+
 @keyframes move {
 	0% {
 		transform: translatex(-140px);

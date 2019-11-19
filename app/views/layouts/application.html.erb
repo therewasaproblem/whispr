@@ -1,3 +1,20 @@
+<script>
+	function recent{
+    		$.ajax({
+       		'url' : '/recent',
+        	'type' : 'GET',
+        	'data' : {},
+        	'success' : function(data) {              
+            		document.getElementById("like_button_" + id).innerHTML = data
+        	},
+        	'error' : function(request,error)
+        	{
+            	alert("Erro no sistema!");
+        	}
+    		});
+	}
+</script>
+
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -34,18 +51,21 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Favourites</a>
-              <a class="dropdown-item" href="#">Recents</a>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item" onclick="recent" href="/recent">Recents</a>
+              <a class="dropdown-item">
+		<%= link_to({ controller: "/news", action: "search_by_access" }, method: "get") do %>
                 <p style="margin:0">
-                <img src="https://media0.giphy.com/media/47GPQ7ZzivsemHKPvB/source.gif" width="30" height="30" class="d-inline-block align-top" alt="">
-                HOT
+                <img src="https://media0.giphy.com/media/47GPQ7ZzivsemHKPvB/source.gif" width="30" height="30" class="d-inline-block align-top" alt=""></img>
+                Novos
                 </p>
+		<% end %>
               </a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="about">
-              Sobre
-            <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/about">
+              	Sobre
+	    <span class="sr-only">(current)</span></a>
+		
           </li>
         </ul>
         <%= form_tag({ controller: "/news", action: "search" }, method: "get", class: "form-inline my-2 my-lg-0") do %>

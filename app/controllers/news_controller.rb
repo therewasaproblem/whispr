@@ -11,7 +11,11 @@ class NewsController < ActionController::Base
         render "search", layout: "application"
     end
 
- 
+    def search_by_access
+        @itemsOrdered = News.order(access: :desc).limit(20)
+        render "search_by_access", layout: "application"
+    end
+
     def news_access_counter
 	if user_signed_in?
         news = News.find(params[:id])

@@ -15,13 +15,17 @@
 	}
 </script>
 
+
 <div class="card border-light mb-3">
     <div class="card-body">
         <h5 class="card-title"><%= item.title %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
         <p class="card-text"><%= strip_tags(item.summary) %></p>
 	<a href="<%= item.url %> "target=_blank class="card-link">
-        <button type="button" onclick="access_counter(<%= item.id %>)" class="btn btn-primary">Ler a notícia
-	<span id="like_button_<%= item.id %>" class="badge"><%= item.access%></span></button></a>	
+        <button type="button" onclick="access_counter(<%= item.id %>)" class="btn btn-primary">Ler a notícia</button>
+	<span id="like_button_<%= item.id %>" class="count">
+				
+		<%= item.access%></span></a>	
+	<img src="https://image.flaticon.com/icons/png/512/37/37090.png" width="2%"></img>
     </div>	
 </div>
