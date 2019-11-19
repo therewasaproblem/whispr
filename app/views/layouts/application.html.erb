@@ -1,20 +1,3 @@
-<script>
-	function recent{
-    		$.ajax({
-       		'url' : '/recent',
-        	'type' : 'GET',
-        	'data' : {},
-        	'success' : function(data) {              
-            		document.getElementById("like_button_" + id).innerHTML = data
-        	},
-        	'error' : function(request,error)
-        	{
-            	alert("Erro no sistema!");
-        	}
-    		});
-	}
-</script>
-
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -45,13 +28,16 @@
               Home
             <span class="sr-only">(current)</span></a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Config</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Opções
+              Select by
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Favourites</a>
-              <a class="dropdown-item" onclick="recent" href="/recent">Recents</a>
+              <a class="dropdown-item" href="#">Recents</a>
               <a class="dropdown-item">
 		<%= link_to({ controller: "/news", action: "search_by_access" }, method: "get") do %>
                 <p style="margin:0">
@@ -60,12 +46,17 @@
                 </p>
 		<% end %>
               </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="/about">
-              	Sobre
-	    <span class="sr-only">(current)</span></a>
-		
+              Sobre
+            <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
         <%= form_tag({ controller: "/news", action: "search" }, method: "get", class: "form-inline my-2 my-lg-0") do %>
@@ -83,7 +74,9 @@
                 <a class="dropdown-item" href="#">Sua Conta</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Perfil</a>
-                <a class="dropdown-item" href="#">Favoritos</a>
+                <%= link_to "Categorias",  {controller: "/category", action: "index" }, method: "get", :class => "dropdown-item"%>
+                <%= link_to "Favoritas",  {controller: "/favorites", action: "index" }, method: "get", :class => "dropdown-item"%>
+                <a class="dropdown-item" href="#">HOT</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Configurações</a>
                 <%= link_to "Sair", destroy_user_session_path, method: :delete, :class => "dropdown-item"%>

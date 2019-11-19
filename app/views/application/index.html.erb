@@ -1,11 +1,17 @@
-<h1 class="center text-white" vertical-align="text-bottom"> Bem Vindo! </h1>
 <% if user_signed_in? %>
+  <h2 class="text-white"> Notícias para você </h2>
+
+  <% @items.each do |item| %>
+      <%= render partial: "news/news_card", locals: { item: item } %>
+  <% end %>
+
 <% else %>
-<%= link_to new_user_registration_path do %>
-<div class="button instagram"><span class="gradient"></span>Cadastrar</div>
-<% end %>
-<br>
-<%= link_to new_user_session_path do %>
-<div class="button instagram"><span class="gradient"></span>Entrar</div>
-<% end %>
+  <h1 class="center text-white" vertical-align="text-bottom"> Bem Vindo! </h1>
+  <%= link_to new_user_registration_path do %>
+  <div class="button instagram"><span class="gradient"></span>Cadastrar</div>
+  <% end %>
+  <br>
+  <%= link_to new_user_session_path do %>
+  <div class="button instagram"><span class="gradient"></span>Entrar</div>
+  <% end %>
 <% end %>

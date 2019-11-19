@@ -3,6 +3,11 @@ require 'sidekiq/testing'
 Sidekiq::Testing.fake!
 
 RSpec.describe NewsFeedUpdateWorker, type: :worker do
+    before(:each) {
+        # Configurar mock no extractor, para evitar chamadas HTTP.
+        allow(OpengraphExtractor).to receive(:extract_image_from_url)
+    }
+
     let(:source) {
         Source.create name: "Ruby", language: "en",
                       homepage_url: "https://www.ruby-lang.org/",
@@ -46,5 +51,11 @@ RSpec.describe NewsFeedUpdateWorker, type: :worker do
             source_with_feed_options.feed_options
         
         expect(News.count).to eq(old_news_count)
+    end
+
+    it "should try to extract the image URL" do
+        expect(OpengraphExtractor).to receive(:extract_image_from_url)
+
+        NewsFeedUpdateWorker.new.perform source.id, category.id, source.feed_url
     end
 end
