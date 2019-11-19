@@ -67,6 +67,13 @@ ActiveRecord::Schema.define(version: 2019_11_07_014640) do
     t.index ["user_id"], name: "index_sources_users_on_user_id"
   end
 
+  create_table "user_categories", force: :cascade do |t|
+    t.bigint "users_id"
+    t.bigint "categories_id"
+    t.index ["categories_id"], name: "index_user_categories_on_categories_id"
+    t.index ["users_id"], name: "index_user_categories_on_users_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password"
