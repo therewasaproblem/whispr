@@ -103,3 +103,10 @@ count{
 		background: radial-gradient(90px circle at top center, rgba(238,88,63,.5) 30%, rgba(255,255,255,0));
 	}
 }
+
+p{
+	width:1050px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
