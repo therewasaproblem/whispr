@@ -1,4 +1,7 @@
-<script>
+<!-- Script para reconhecer o acesso ao link e registrar no banco de dados,
+     ele acessa o banco de dados buscando a notícia com certo ID e atualiza a coluna "access"
+     incrementando +1 acesso. -->
+<script> 
 	function access_counter(id){
     		$.ajax({
        		'url' : '/news/access',

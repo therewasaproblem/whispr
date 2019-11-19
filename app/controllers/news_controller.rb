@@ -1,6 +1,5 @@
 class NewsController < ActionController::Base
     def index
-        # FIXME Talvez ordenar por data da notícia seria bom.
         @items = News.order(id: :desc).limit(20)
         render "index", layout: "application"
     end

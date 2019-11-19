@@ -34,12 +34,6 @@ ActiveRecord::Schema.define(version: 2019_11_03_211425) do
     t.index "url, md5((title)::text), md5(summary)", name: "index_news_on_url_and_title_and_summary", unique: true
   end
 
-  create_table "news_counters", force: :cascade do |t|
-    t.bigint "acessos"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "sources", force: :cascade do |t|
     t.string "name"
     t.string "language"
