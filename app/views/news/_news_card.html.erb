@@ -25,7 +25,7 @@
     <% end %>
     <div class="card-body">
         <h5 class="card-title"><%= item.title %></h5>
-        <p class="card-text" style="width:750px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis"><%= strip_tags(item.summary) %></p>
+        <p class="card-text"><%= strip_tags(item.summary) %></p>
         <a href="<%= item.url %>" target=_blank class="card-link">
 	<button type="button" onclick="access_counter(<%= item.id %>)" class="btn btn-primary">Ler a notícia</button>
 	<span id="like_button_<%= item.id %>" class="count">

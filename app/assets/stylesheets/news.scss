@@ -10,3 +10,11 @@
     background-position: center center;
     flex-shrink: 0.2;
 }
+
+.news-card p.card-text{
+    width:750px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
