@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
 
 
-<h2 class="text-white">Selecione suas categorias preferidas!</h2>
+<h2>Selecione suas categorias preferidas!</h2>
 
 <%= form_tag({ controller: "category", action: "submit" }, method: "post") do %>
 	<% @category_list.each do |category| %>
@@ -11,7 +11,7 @@
 		<% if @user.categories.exists?(category.id) %>
 			checked
 		<% end %>>
-	  <label for="<%= category.tag %>" class="text-white"><%= category.tag %></label>
+	  <label for="<%= category.tag %>"><%= category.tag %></label>
 	</div>
 	<% end %>
 
@@ -23,7 +23,7 @@
 
 
 <% else %>	
-<h2 class="text-white" align="center">É necessário estar Logado para selecionar as categorias preferidas.</h2>
+<h2 align="center">É necessário estar Logado para selecionar as categorias preferidas.</h2>
 <p>
 <div align="center">
 	<%= button_to "Redirecionar para Entrar",  new_user_session_path, method: "get"%>
