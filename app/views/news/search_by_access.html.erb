@@ -1,7 +1,7 @@
 <% if @itemsOrdered.length > 0 %>
-    <h1 class="text-white">Notícias recentes mais acessadas <%= @keyword %></h1>
+    <h1>Notícias recentes mais acessadas <%= @keyword %></h1>
 <% else %>
-    <h1 class="text-white">Nenhuma notícia encontrada</h1>
+    <h1>Nenhuma notícia encontrada</h1>
 <% end %>
 
 <% @itemsOrdered.each do |item| %>
