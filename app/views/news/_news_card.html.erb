@@ -22,8 +22,14 @@
 <div class="news-card card bg-light mb-3 row d-flex flex-row">
     <% if item.image_url %>
         <div class="card-image col-sm-4" style="background-image: url('<%= item.image_url %>');"></div>
-    <% end %>
-    <div class="card-body col-sm-8">
+	<% end %>
+	
+	<%# Apenas usar uma coluna menor caso haja uma imagem %>
+	<% if item.image_url %>
+		<div class="card-body col-sm-8">
+	<% else %>
+		<div class="card-body col-sm-12">
+	<% end %>
         <h5 class="card-title"><%= item.title %></h5>
         <p class="card-text text-truncate"><%= strip_tags(item.summary) %></p>
 	<br><br><br>
