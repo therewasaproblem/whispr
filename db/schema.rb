@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 2019_11_22_121334) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories_users", id: false, force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["category_id"], name: "index_categories_users_on_category_id"
+    t.index ["user_id"], name: "index_categories_users_on_user_id"
+  end
+
   create_table "news", force: :cascade do |t|
     t.string "title"
     t.text "summary"
