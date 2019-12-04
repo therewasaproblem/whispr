@@ -12,9 +12,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"	>
       <%= link_to({ controller: "/application", action: "hello" }, method: "get", class: "navbar-brand") do %>
-        <img src="https://image.flaticon.com/icons/svg/124/124021.svg" width="30" height="30" class="rounded-circle" alt="">
+        <img src="https://icon-library.net/images/w-icon/w-icon-25.jpg" width="30" height="30" class="rounded-circle" alt="">
         Whispr
       <% end %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,38 +23,19 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home
-            <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Config</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Select by
+              Listar por
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Favourites</a>
-              <a class="dropdown-item" href="#">Recents</a>
-              <a class="dropdown-item" href="#">
-                <p style="margin:0">
-                <img src="https://media0.giphy.com/media/47GPQ7ZzivsemHKPvB/source.gif" width="30" height="30" class="d-inline-block align-top" alt="">
-                HOT
-                </p>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+	      <%= link_to({ controller: "/news", action: "search_by_access" }, method: "get", class:"dropdown-item") do %>
+                Mais acessados
+	      <% end %>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="about">
+            <a class="nav-link" href="/about">
               Sobre
             <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
         <%= form_tag({ controller: "/news", action: "search" }, method: "get", class: "form-inline my-2 my-lg-0") do %>
@@ -71,12 +52,9 @@
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Sua Conta</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Perfil</a>
                 <%= link_to "Categorias",  {controller: "/category", action: "index" }, method: "get", :class => "dropdown-item"%>
                 <%= link_to "Favoritas",  {controller: "/favorites", action: "index" }, method: "get", :class => "dropdown-item"%>
-                <a class="dropdown-item" href="#">HOT</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Configurações</a>
                 <%= link_to "Sair", destroy_user_session_path, method: :delete, :class => "dropdown-item"%>
               </div>
             </li>

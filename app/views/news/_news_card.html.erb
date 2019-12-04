@@ -1,15 +1,48 @@
-<div class="news-card card border-light mb-3 d-flex flex-row">
+<!-- Script para reconhecer o acesso ao link e registrar no banco de dados,
+     ele acessa o banco de dados buscando a notícia com certo ID e atualiza a coluna "access"
+     incrementando +1 acesso. -->
+<script> 
+	function access_counter(id){
+    		$.ajax({
+       		'url' : '/news/access',
+        	'type' : 'GET',
+        	'data' : {id},
+        	'success' : function(data) {              
+            		document.getElementById("like_button_" + id).innerHTML = data
+        	},
+        	'error' : function(request,error)
+        	{
+            	alert("Erro no sistema!");
+        	}
+    		});
+	}
+</script>
+
+
+<div class="news-card card bg-light mb-3 row d-flex flex-row">
     <% if item.image_url %>
-        <div class="card-image" style="background-image: url('<%= item.image_url %>');"></div>
-    <% end %>
-    <div class="card-body">
+        <div class="card-image col-sm-4" style="background-image: url('<%= item.image_url %>');"></div>
+	<% end %>
+	
+	<%# Apenas usar uma coluna menor caso haja uma imagem %>
+	<% if item.image_url %>
+		<div class="card-body col-sm-8">
+	<% else %>
+		<div class="card-body col-sm-12">
+	<% end %>
         <h5 class="card-title"><%= item.title %></h5>
-        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-        <p class="card-text"><%= strip_tags(item.summary) %></p>
-        <a href="<%= item.url %>" target=_blank class="card-link">Ler a notícia</a>
+        <p class="card-text text-truncate"><%= strip_tags(item.summary) %></p>
+	<br><br><br>
+        <a href="<%= item.url %>" target=_blank class="card-link">
+	<button type="button" onclick="access_counter(<%= item.id %>)" class="btn btn-dark">Ler a notícia</button>
+	<span id="like_button_<%= item.id %>" class="count">
+				
+		<%= item.access%></span></a>
+	<img src="https://image.flaticon.com/icons/png/512/37/37090.png" width="2%"></img>	
         <% if user_signed_in? %>
             <% if !current_user.news.exists?(item.id) %>
-                <%= link_to "Salvar nas favoritas", {:controller => "favorites", :action => "save", :id => item.id }, method: :post, :class => "card-link"%>
+		<br>                
+		<%= link_to "Salvar nas favoritas", {:controller => "favorites", :action => "save", :id => item.id }, method: :post, :class => "card-link"%>
             <% else %>
                 <%= link_to "Excluir das favoritas", {:controller => "favorites", :action => "delete", :id => item.id }, method: :delete, :class => "card-link"%>
             <% end %>

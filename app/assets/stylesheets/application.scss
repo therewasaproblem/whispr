@@ -7,7 +7,6 @@
 body {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to right top, #533fde, #273cb9, #003593, #002b6c, #001f45, #042a4a, #11344d, #213e50, #2a697f, #3097ab, #3ec8d2, #5ffbf1);
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: Oswald;
@@ -17,7 +16,6 @@ title {
     width: 100%;
     height: 100vh;
     color: #fff;
-    background-image: linear-gradient(to right top, #533fde, #273cb9, #003593, #002b6c, #001f45, #042a4a, #11344d, #213e50, #2a697f, #3097ab, #3ec8d2, #5ffbf1);
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: Oswald;
@@ -28,54 +26,12 @@ h1 {
     font-size: 80px;
 }
 
-.navbar {
-    border-radius: 30px;
-}
-
 .center {
     padding: 5% 0;
     text-align: center;
 }
 
-.button {
-	display: block;
-  width: 25%;
-  max-width: 100%;
-  margin: 0 auto;
-  margin-bottom: 0;
-  overflow: hidden;
-  position: relative;
-  transform: translatez(0);
-  text-decoration: none;
-  box-sizing: border-box;
-  font-size: 24px;
-	font-weight: normal;
-	box-shadow: 0 9px 18px rgba(0,0,0,0.2);
-}
-
-.instagram {
-	text-align: center;
-	border-radius: 50px;
-  padding: 26px;
-  color: white;
-  background: #BD3381;
-  transition: all 0.2s ease-out 0s;
-}
-
-.gradient {
-	display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  bottom: auto;
-  margin: auto;
-  z-index: -1;
-  background: radial-gradient(90px circle at top center, rgba(238,88,63,.8) 30%, rgba(255,255,255,0));
-  transition: all 0s ease-out 0s;
-	transform: translatex(-140px);
-	animation: 18s linear 0s infinite move;
+.navbar {
 }
 
 @keyframes move {
@@ -101,3 +57,7 @@ h1 {
 		background: radial-gradient(90px circle at top center, rgba(238,88,63,.5) 30%, rgba(255,255,255,0));
 	}
 }
+
+.login-form{width:390px;}
+.login-title{font-family: 'Exo', sans-serif;text-align:center;color: white;}
+.login-button{margin-top:10px;}

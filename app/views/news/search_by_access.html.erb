@@ -1,9 +1,9 @@
-<% if @items.length > 0 %>
-    <h1>Notícias à respeito de <%= @keyword %></h1>
+<% if @itemsOrdered.length > 0 %>
+    <h1>Notícias recentes mais acessadas <%= @keyword %></h1>
 <% else %>
     <h1>Nenhuma notícia encontrada</h1>
 <% end %>
 
-<% @items.each do |item| %>
+<% @itemsOrdered.each do |item| %>
     <%= render partial: "news_card", locals: { item: item } %>
 <% end %>
