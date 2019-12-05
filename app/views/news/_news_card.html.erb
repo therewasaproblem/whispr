@@ -75,7 +75,7 @@
             <% if !current_user.news.exists?(item.id) %>
 				<button onclick="save_favorite_ajax(<%= item.id %>)" class="btn btn-dark" id="save_favorite_<%= item.id %>">Salvar nas favoritas</button>
             <% else %>
-                <button onclick="delete_favorite_ajax(<%= item.id %>)" class="btn btn-dark" id="dalete_favorite_<%= item.id %>%">Excluir das favoritas</button>
+                <button onclick="delete_favorite_ajax(<%= item.id %>)" class="btn btn-dark" id="delete_favorite_<%= item.id %>">Excluir das favoritas</button>
             <% end %>
         <% end %>
     </div>
