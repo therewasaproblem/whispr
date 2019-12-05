@@ -10,6 +10,6 @@ class CategoryController < ActionController::Base
 	preferences = params[:categories_ids]
 	current_user.category_ids= preferences
 	current_user.save
-	redirect_to action: "hello", controller: "application"
+	redirect_to action: "prefered_search", controller: "news"
     end
 end

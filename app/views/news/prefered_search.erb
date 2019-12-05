@@ -1,0 +1,9 @@
+<% if @items.length > 0 %>
+    <h1>Aqui estão suas notícias preferidas! <%= @keyword %></h1>
+<% else %>
+    <h1>Nenhuma notícia encontrada</h1>
+<% end %>
+
+<% @items.each do |item| %>
+    <%= render partial: "news_card", locals: { item: item } %>
+<% end %>
