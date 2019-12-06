@@ -8,24 +8,26 @@ body{
     font-family: Oswald;
 }
 
+[class*="containerA-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 300px){
 .containerA{
-    width: 1000px;
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
 }
-
 .containerA .cardA{
     position: relative;
     cursor: pointer;
 }
-
 .containerA .cardA .face{
     width: 300px;
     height: 200px;
     transition: 0.5s;
 }
-
 .containerA .cardA .face.face1{
     position: relative;
     background: #333;
@@ -59,7 +61,7 @@ body{
     padding: 0;
     color: #fff;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .containerA .cardA .face.face2{
@@ -97,6 +99,7 @@ body{
     background: #333;
     color: #fff;
 }
+}
 </style>
 
 <head>
@@ -107,12 +110,12 @@ body{
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="containerA">
+    <div class="containerA row">
         <div class="cardA">
             <div class="face face1">
                 <div class="content">
                     <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
-                    <h3>Design</h3>
+                    <h3>DESIGN</h3>
                 </div>
             </div>
             <div class="face face2">
@@ -127,33 +130,22 @@ body{
             <div class="face face1">
                 <div class="content">
                     <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
-                    <h3>RSS</h3>
+                    <h3>DESENVOLVEDORES</h3>
                 </div>
             </div>
             <div class="face face2">
                 <div class="content">
-                    <p>
-                    Escolhemos os melhores sites de notícias baseadas em opiniões profissionais e opiniões dos próprios usuários.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="cardA">
-            <div class="face face1">
-                <div class="content">
-                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
-                    <h3>Sobre</h3>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <p>
-                    Aplicativo criado com a intenção de ser um agregador de notícias, trazendo notícias selecionadas pelo usuário ou notícias relevantes.
+                    <p>Guilherme Gonzalo Costa Cerda</p>
+		    <p>João Guilherme De Costa Seike</p>
+		    <p>Joon Hyuk Kim</p>
+		    <p>Kelvin Kang</p>
+		    <p>Lucas Pereira Castelo Branco</p>
+		    <p>Ramon Dantas De Jesus</p>
 
-                    </p>
                 </div>
             </div>
         </div>
-    </div>
+        </div>
+</div>
 </body>
 </html>
