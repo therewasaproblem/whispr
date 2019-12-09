@@ -39,12 +39,7 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
         <% end %>
 
-	 <% if user_signed_in? %>
-	<%= form_tag({ controller: "/news", action: "prefered_search" }, method: "get", class: "form-inline my-2 my-lg-0") do %>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar Preferidos</button>
-        <% end %>
-
-       
+        <% if user_signed_in? %>
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
