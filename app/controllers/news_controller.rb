@@ -11,6 +11,12 @@ class NewsController < ActionController::Base
         render "search", layout: "application"
     end
 
+    def prefered_search
+            @keyword = params[:q]
+	@items = News.joins("JOIN categories_users as cusers ON news.category_id = cusers.category_id JOIN categories as c ON news.category_id = c.id JOIN users as u ON cusers.user_id = u.id").where(u: { id: current_user.id } ).where("title ILIKE ?", "%#{@keyword}%").limit(20)
+	render "prefered_search", layout:"application"
+    end
+
     def search_by_access
         @itemsOrdered = News.order(access: :desc).limit(20)
         render "search_by_access", layout: "application"
