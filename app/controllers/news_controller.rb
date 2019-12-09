@@ -23,12 +23,13 @@ class NewsController < ActionController::Base
     end
 
     def news_access_counter
-	if user_signed_in?
-        news = News.find(params[:id])
-    	news.access = news.access + 1
-	news.save
-	render html: news.access
-	else render html: 0    	
-	end
+        if user_signed_in?
+            news = News.find(params[:id])
+            news.access = news.access + 1
+            news.save
+            render html: news.access
+        else
+            render html: 0
+        end
     end
 end
